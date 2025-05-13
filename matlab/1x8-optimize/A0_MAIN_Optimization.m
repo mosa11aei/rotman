@@ -11,13 +11,13 @@ clear
 %All units are in mm
 
 % Patch W, Patch L, Line W, ArrayL
-param_X = [9.82, 7.60, 1.366, 7.60]; % Initial values
-LB_X = [8.9, 6.5, 0.9, 6.5]; % Lower bounds
-UB_X = [11, 9, 1.5, 15]; % Upper bounds
+param_X = [9.6242, 7.6072, 1.2697, 10.5536]; % Initial values
+LB_X = [9, 7, 1.2, 10]; % Lower bounds
+UB_X = [10, 8, 1.35, 10.6]; % Upper bounds
 
 %% Seed simulation for reference
-runPyCmd = ['ipy64 1x8_HFSS_Optimize.py ',num2str(param_X)];
-[~,msg] = system(runPyCmd);
+% runPyCmd = ['ipy64 1x8_HFSS_Optimize.py ',num2str(param_X)];
+% [~,msg] = system(runPyCmd);
 
 disp(msg)
 

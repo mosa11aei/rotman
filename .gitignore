@@ -50,6 +50,7 @@ genesys/.logger
 *.log
 *.vbs
 *.aedtresults
+*.aedt.lock
 *.tmp
 *.asol
 *.sab
