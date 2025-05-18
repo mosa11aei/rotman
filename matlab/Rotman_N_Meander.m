@@ -1,4 +1,4 @@
-function [x_out, y_out] = Rotman_N_Meander(x_start, y_start, x_end, y_end, A_total, N)
+function [x_out, y_out] = Rotman_N_Meander(x_start, y_start, x_end, y_end, A_total, N, start_sign)
     % Check that N is at least 1
     if N < 1
         error('N must be at least 1');
@@ -16,7 +16,7 @@ function [x_out, y_out] = Rotman_N_Meander(x_start, y_start, x_end, y_end, A_tot
     y_out = y_points(1);
 
     % Alternate signs for left/right meanders
-    sign = 1;
+    sign = start_sign;
 
     for i = 1:N
         x0 = x_points(i);

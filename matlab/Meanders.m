@@ -1,10 +1,12 @@
-x_start = -52.932;
-y_start = 59.754;
-x_end = -50;
-y_end = 90.5;  % always fixed in this setup
-total_length = 31.25;
+x_start = 0;
+y_start = -294.579;
+x_end = 0;
+y_end = -317;  % always fixed in this setup
+total_length = 50.87736;
+num_meanders = 5;
+start_sign = 1;
 
-[x_meander, y_meander] = Rotman_N_Meander(x_start, y_start, x_end, y_end, total_length, 4);
+[x_meander, y_meander] = Rotman_N_Meander(x_start, y_start, x_end, y_end, total_length, num_meanders, start_sign);
 plot(x_meander, y_meander, '-o');
 axis equal;
 grid on;
