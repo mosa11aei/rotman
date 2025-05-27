@@ -1,0 +1,32 @@
+
+hpeesofsim (*) 601.update2.1 May  7 2024, MINT version 5
+    (64-bit linux built: Tue May 07, 2024 20:26:56 +0000)
+
+
+***** Simulation started at Tue, May 27 2025 16:53:23 -0400
+      Running on host: "afshari.eecs.umich.edu"
+      In Directory: "/research/alimos/rotman/ads/Amplifier_wrk/data"
+      User: "alimos", Process ID: 123017
+
+
+1 spare nodes and 1 spare devices are removed.
+The details can be found in file '/research/alimos/rotman/ads/Amplifier_wrk/data/Modulator_data/spare_removal.txt'.
+
+
+
+TRAN Tran1[1] <Amplifier_lib:Modulator:schematic>   time=(0 s->10 ms)
+Warning detected by hpeesofsim during TRAN analysis `Tran1'.
+    MaxTimeStep reduced to  6.250e-05 to resolve source bandwidth.
+
+
+
+Resource usage:
+    User time                 =     2.86 seconds.
+    System time               =     0.09 seconds.
+    Total CPU time            =     2.94 seconds.
+    Simulation stopwatch time =     2.47 seconds.
+    Total stopwatch time      =     2.91 seconds.
+
+    Physical memory used: 98.3 MBytes.
+    Incremental virtual memory (data only) used:  43.2 MBytes.
+

@@ -39,7 +39,6 @@ portColor 5
 backgroundColor 0
 foregroundColor 41
 globalArcResolution 5.000000
-pcbViaArcResolution 5.000000
 selectFilter 9727
 selectMode 1
 shapeSelectMode 2

@@ -1,0 +1,38 @@
+
+hpeesofsim (*) 601.update2.1 May  7 2024, MINT version 5
+    (64-bit linux built: Tue May 07, 2024 20:26:56 +0000)
+
+
+***** Simulation started at Tue, May 27 2025 17:03:32 -0400
+      Running on host: "afshari.eecs.umich.edu"
+      In Directory: "/research/alimos/rotman/ads/Amplifier_wrk/data"
+      User: "alimos", Process ID: 129057
+
+
+1 spare nodes and 1 spare devices are removed.
+The details can be found in file '/research/alimos/rotman/ads/Amplifier_wrk/data/_5V_Modulator_data/spare_removal.txt'.
+
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with no DC path to ground (topology corrected): 4
+
+Pt DC convergence is used.
+
+.
+
+
+TRAN Tran1[1] <Amplifier_lib:5V_Modulator:schematic>   time=(0 s->500 ns)
+Warning detected by hpeesofsim during TRAN analysis `Tran1'.
+    Maximum timestep reduced to half of shortest transmission line delay  2.500e-11.
+
+
+
+Resource usage:
+    User time                 =    44.99 seconds.
+    System time               =     0.11 seconds.
+    Total CPU time            =    45.10 seconds.
+    Simulation stopwatch time =    44.61 seconds.
+    Total stopwatch time      =    45.17 seconds.
+
+    Physical memory used: 102 MBytes.
+    Incremental virtual memory (data only) used:  44.5 MBytes.
+

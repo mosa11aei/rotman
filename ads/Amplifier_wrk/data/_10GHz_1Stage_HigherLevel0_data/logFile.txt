@@ -1,0 +1,28 @@
+
+hpeesofsim (*) 601.update2.1 May  7 2024, MINT version 5
+    (64-bit linux built: Tue May 07, 2024 20:26:56 +0000)
+
+
+***** Simulation started at Tue, May 27 2025 11:23:31 -0400
+      Running on host: "afshari.eecs.umich.edu"
+      In Directory: "/research/alimos/rotman/ads/Amplifier_wrk/data"
+      User: "alimos", Process ID: 102889
+
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with no DC path to ground (topology corrected): 1
+
+Pt DC convergence is used.
+
+SP SmartSimulation1.SP1[1] <Amplifier_lib:10GHz_1Stage_HigherLevel:schematic>   freq=(5 GHz->15 GHz)
+
+
+Resource usage:
+    User time                 =     0.49 seconds.
+    System time               =     0.10 seconds.
+    Total CPU time            =     0.59 seconds.
+    Simulation stopwatch time =     0.08 seconds.
+    Total stopwatch time      =     0.58 seconds.
+
+    Physical memory used: 106 MBytes.
+    Incremental virtual memory (data only) used:  44.3 MBytes.
+

@@ -1,0 +1,4380 @@
+defun  _DDSobjectSaveRestore_()
+{
+decl ddsId, ddWinId, ddoId, pageId, goId, ptId, traceID, axisID, plotID;
+
+ddsId = get_dds();
+
+set(ddsId, "ddsFileVersion", 1.0);
+
+ddoId = get_new(ddsId, "Object");
+// DataDisplay Object:
+	set(ddoId, "Path", dds_get_exec_path(what_file(0)));
+	set(ddoId, "Name", dds_get_exec_file(what_file(0)));
+	set(ddoId, "DefaultDataset", "_10GHz_1Stage_HigherLevel0");
+decl pageId;
+set(ddoId, "EnableExpressionUpdates", FALSE);
+pageId = get(ddoId, "CurrentPage");
+if (pageId == NULL) pageId = get_first(ddoId, "Page");
+if (pageId == NULL) pageId = get_new(ddoId, "Page");
+ddWinId = get_new(ddsId, "Window");
+set(ddWinId, "Object", ddoId);
+	set(ddWinId, "Frame", list(80, 49, 1052, 768));
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "Sopt=_10GHz_1Stage_HigherLevel0..Sopt");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1292289158);
+ // Graphical Object:
+ set(goId0, "Right", 6922);
+ set(goId0, "Bottom", 16089);
+ set(goId0, "Left", 6922);
+	set(goId0, "Top", 16089);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "Sopt_at_m1=Sopt[ssm1]");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1292289157);
+ // Graphical Object:
+ set(goId0, "Right", 6922);
+ set(goId0, "Bottom", 16089);
+ set(goId0, "Left", 6922);
+	set(goId0, "Top", 16089);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "MaxG=max_gain(_10GHz_1Stage_HigherLevel0..S)");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1540343510);
+ // Graphical Object:
+ set(goId0, "Right", 7020);
+ set(goId0, "Bottom", 16065);
+ set(goId0, "Left", 7020);
+	set(goId0, "Top", 16065);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "GammaS_at_freq_pt=sm_gamma1(_10GHz_1Stage_HigherLevel0..S[ssm1])");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 2010580150);
+ // Graphical Object:
+ set(goId0, "Right", 6685);
+ set(goId0, "Bottom", 16082);
+ set(goId0, "Left", 6685);
+	set(goId0, "Top", 16082);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "GammaL_at_freq_pt=sm_gamma2(_10GHz_1Stage_HigherLevel0..S[ssm1])");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1775777325);
+ // Graphical Object:
+ set(goId0, "Right", 6548);
+ set(goId0, "Bottom", 16081);
+ set(goId0, "Left", 6548);
+	set(goId0, "Top", 16081);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "Zopt=zopt(Sopt_at_m1,_10GHz_1Stage_HigherLevel0..Z0[0])");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1649377588);
+ // Graphical Object:
+ set(goId0, "Right", 6755);
+ set(goId0, "Bottom", 16106);
+ set(goId0, "Left", 6755);
+	set(goId0, "Top", 16106);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "Zsource1=sm_z1(_10GHz_1Stage_HigherLevel0..S[ssm1],_10GHz_1Stage_HigherLevel0..Z0[0])");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1847091090);
+ // Graphical Object:
+ set(goId0, "Right", 6779);
+ set(goId0, "Bottom", 16057);
+ set(goId0, "Left", 6779);
+	set(goId0, "Top", 16057);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "Zload1=sm_z2(_10GHz_1Stage_HigherLevel0..S[ssm1],_10GHz_1Stage_HigherLevel0..Z0[0])");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 616756861);
+ // Graphical Object:
+ set(goId0, "Right", 6809);
+ set(goId0, "Bottom", 16060);
+ set(goId0, "Left", 6809);
+	set(goId0, "Top", 16060);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "S_22p_at_freq=S_22p[ssm1]");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 791706043);
+ // Graphical Object:
+ set(goId0, "Right", 6811);
+ set(goId0, "Bottom", 16070);
+ set(goId0, "Left", 6811);
+	set(goId0, "Top", 16070);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "Pgain_assoc_at_m1=Pgain_assoc[ssm1]");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1639484191);
+ // Graphical Object:
+ set(goId0, "Right", 6550);
+ set(goId0, "Bottom", 16063);
+ set(goId0, "Left", 6550);
+	set(goId0, "Top", 16063);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "Zload_wSopt=zopt(conj(S_22p_at_freq),_10GHz_1Stage_HigherLevel0..Z0[0])");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 2015084120);
+ // Graphical Object:
+ set(goId0, "Right", 6211);
+ set(goId0, "Bottom", 16044);
+ set(goId0, "Left", 6211);
+	set(goId0, "Top", 16044);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "StabK1=stab_fact(_10GHz_1Stage_HigherLevel0..S[ssm1])");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 625431944);
+ // Graphical Object:
+ set(goId0, "Right", 6904);
+ set(goId0, "Bottom", 16071);
+ set(goId0, "Left", 6904);
+	set(goId0, "Top", 16071);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "Pgain_assoc=pwr_gain(_10GHz_1Stage_HigherLevel0..S,zopt(Sopt,_10GHz_1Stage_HigherLevel0..Z0[0]),zopt(conj(S_22p),_10GHz_1Stage_HigherLevel0..Z0[0]),_10GHz_1Stage_HigherLevel0..Z0[0])");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 183420629);
+ // Graphical Object:
+ set(goId0, "Right", 6755);
+ set(goId0, "Bottom", 16081);
+ set(goId0, "Left", 6755);
+	set(goId0, "Top", 16081);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "S_22p=_10GHz_1Stage_HigherLevel0..S22+(_10GHz_1Stage_HigherLevel0..S12*_10GHz_1Stage_HigherLevel0..S21*Sopt)/(1-_10GHz_1Stage_HigherLevel0..S11*Sopt)");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 52970914);
+ // Graphical Object:
+ set(goId0, "Right", 6416);
+ set(goId0, "Bottom", 16070);
+ set(goId0, "Left", 6416);
+	set(goId0, "Top", 16070);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "GammaL_wSopt=conj(S_22p_at_freq)");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 397194352);
+ // Graphical Object:
+ set(goId0, "Right", 6578);
+ set(goId0, "Bottom", 16030);
+ set(goId0, "Left", 6578);
+	set(goId0, "Top", 16030);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Box");
+// Base Class Object:
+ 			set(goId0, "Uid", 1396706062);
+ // Graphical Object:
+ set(goId0, "Right", 22639);
+ set(goId0, "Bottom", 15259);
+ set(goId0, "Left", 7183);
+	set(goId0, "Top", 4441);
+ set(goId0, "LineWidth", 14);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Move marker to select \nfreq point.  All listings and \nimpedances on Smith Chart\nwill be updated. ");
+	set(goId0, "FontSize", 264);
+	set(goId0, "TextColor", 1);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 2064274851);
+ // Graphical Object:
+ set(goId0, "Right", 10767);
+ set(goId0, "Bottom", 5840);
+ set(goId0, "Left", 7512);
+	set(goId0, "Top", 4784);
+ set(goId0, "LineColor", 1);
+ set(goId0, "LineWidth", 42);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 1270473983);
+ // Graphical Object:
+ set(goId0, "Right", 9555);
+ set(goId0, "Bottom", 10064);
+ set(goId0, "Left", 7992);
+	set(goId0, "Top", 9402);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 0);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 261);
+	set(goId0, "NumDigits", 3);
+	set(goId0, "LabelOnOff", FALSE);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "TitleFontSize", 222);
+decl traceID;
+traceID = get_new(goId0, "Trace", "MaxG[ssm1]", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "MaxG[ssm1]");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 1954505701);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Maximum\nAvailable\nPower Gain, dB");
+	set(goId0, "FontSize", 274);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 757071395);
+ // Graphical Object:
+ set(goId0, "Right", 9713);
+ set(goId0, "Bottom", 9304);
+ set(goId0, "Left", 7825);
+	set(goId0, "Top", 8482);
+ set(goId0, "LineWidth", 1);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "SmithChart");
+// Base Class Object:
+ 			set(goId0, "Uid", 150583551);
+ // Graphical Object:
+ set(goId0, "Right", 6918);
+ set(goId0, "Bottom", 11067);
+ set(goId0, "Left", 1564);
+	set(goId0, "Top", 6354);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 586);
+	set(goId0, "RightMargin", 100);
+	set(goId0, "TopMargin", 125);
+	set(goId0, "BottomMargin", 569);
+	set(goId0, "TitleFontSize", 139);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "xAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 889310359);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 222);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 222);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 1);
+//Polar axis...
+	if (axisID != NULL) set(axisID, "IndepStop", 8.5e+008);
+//Smith chart axis...
+	if (axisID != NULL) set(axisID, "AdmittanceColor", 104);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "yAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1724369960);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 222);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 222);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 1);
+//Polar axis...
+	if (axisID != NULL) set(axisID, "IndepStop", 8.5e+008);
+//Smith chart axis...
+	if (axisID != NULL) set(axisID, "AdmittanceColor", 104);
+decl traceID;
+traceID = get_new(goId0, "Trace", "Sopt", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "Sopt");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 695016588);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+decl traceID;
+traceID = get_new(goId0, "Trace", "Sopt_at_m1", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "Sopt_at_m1");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 5);
+	if (traceID != NULL) set(traceID, "Uid", 1484198750);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 83);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "SymbolsOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+decl traceID;
+traceID = get_new(goId0, "Trace", "GammaS_at_freq_pt", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "GammaS_at_freq_pt");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 6);
+	if (traceID != NULL) set(traceID, "Uid", 1492085399);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 83);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "SymbolsOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+decl traceID;
+traceID = get_new(goId0, "Trace", "GammaL_at_freq_pt", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "GammaL_at_freq_pt");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 30);
+	if (traceID != NULL) set(traceID, "Uid", 1753616313);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 83);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "SymbolsOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+decl traceID;
+traceID = get_new(goId0, "Trace", "GammaL_wSopt", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "GammaL_wSopt");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 27);
+	if (traceID != NULL) set(traceID, "Uid", 774717367);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 83);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "SymbolsOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 170532418);
+ // Graphical Object:
+ set(goId0, "Right", 10888);
+ set(goId0, "Bottom", 14622);
+ set(goId0, "Left", 7798);
+	set(goId0, "Top", 13929);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 0);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 260);
+	set(goId0, "NumDigits", 3);
+	set(goId0, "LabelOnOff", FALSE);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "TitleFontSize", 222);
+decl traceID;
+traceID = get_new(goId0, "Trace", "Sopt_at_m1", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "Sopt_at_m1");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 427643303);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Source Reflection\nCoefficient for \nMinimum NF");
+	set(goId0, "FontSize", 274);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 2102799057);
+ // Graphical Object:
+ set(goId0, "Right", 10424);
+ set(goId0, "Bottom", 13857);
+ set(goId0, "Left", 8287);
+	set(goId0, "Top", 13035);
+ set(goId0, "LineWidth", 1);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 71013072);
+ // Graphical Object:
+ set(goId0, "Right", 14025);
+ set(goId0, "Bottom", 12869);
+ set(goId0, "Left", 10592);
+	set(goId0, "Top", 11847);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 350);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 274);
+	set(goId0, "Format", ddsFormatEngineering);
+	set(goId0, "NumDigits", 2);
+	set(goId0, "LabelOnOff", FALSE);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "Title", "Zopt for NFmin");
+	set(goId0, "TitleFontSize", 250);
+decl traceID;
+traceID = get_new(goId0, "Trace", "Zopt", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatRealImaginary);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "Zopt");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 548050935);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 1858554963);
+ // Graphical Object:
+ set(goId0, "Right", 13605);
+ set(goId0, "Bottom", 10143);
+ set(goId0, "Left", 10224);
+	set(goId0, "Top", 8967);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 107);
+	set(goId0, "RightMargin", 107);
+	set(goId0, "TopMargin", 350);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 261);
+	set(goId0, "NumDigits", 3);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "Title", "Simultaneous Match");
+	set(goId0, "TitleFontSize", 250);
+decl traceID;
+traceID = get_new(goId0, "Trace", "Zsource1", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatRealImaginary);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "Zsource1");
+	if (traceID != NULL) set(traceID, "Color", 5);
+	if (traceID != NULL) set(traceID, "Uid", 265222988);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 562175492);
+ // Graphical Object:
+ set(goId0, "Right", 17618);
+ set(goId0, "Bottom", 10139);
+ set(goId0, "Left", 13935);
+	set(goId0, "Top", 8978);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 350);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 261);
+	set(goId0, "NumDigits", 3);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "Title", "Simultaneous Match");
+	set(goId0, "TitleFontSize", 250);
+decl traceID;
+traceID = get_new(goId0, "Trace", "Zload1", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatRealImaginary);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "Zload1");
+	if (traceID != NULL) set(traceID, "Color", 5);
+	if (traceID != NULL) set(traceID, "Uid", 547929826);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Note: if the device (or circuit) is unstable \nat the freq point, the simultaneous conjugate \nmatching impedances are undefined and \nGammaL_at_freq_pt and GammaS_at_freq_pt \ndefault to 0.  Also, MaxG is set equal to the \nmaximum stable gain, |S21|/|S12|.");
+	set(goId0, "FontSize", 234);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 435324829);
+ // Graphical Object:
+ set(goId0, "Right", 6578);
+ set(goId0, "Bottom", 13673);
+ set(goId0, "Left", 1684);
+	set(goId0, "Top", 12269);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 498653122);
+ // Graphical Object:
+ set(goId0, "Right", 21058);
+ set(goId0, "Bottom", 12972);
+ set(goId0, "Left", 18166);
+	set(goId0, "Top", 12229);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 0);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 286);
+	set(goId0, "NumDigits", 3);
+	set(goId0, "LabelOnOff", FALSE);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "TitleFontSize", 222);
+decl traceID;
+traceID = get_new(goId0, "Trace", "Pgain_assoc_at_m1", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "Pgain_assoc_at_m1");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 752370910);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 868815318);
+ // Graphical Object:
+ set(goId0, "Right", 17426);
+ set(goId0, "Bottom", 12870);
+ set(goId0, "Left", 14358);
+	set(goId0, "Top", 12248);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 0);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 274);
+	set(goId0, "Format", ddsFormatEngineering);
+	set(goId0, "NumDigits", 2);
+	set(goId0, "LabelOnOff", FALSE);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "TitleFontSize", 222);
+decl traceID;
+traceID = get_new(goId0, "Trace", "Zload_wSopt", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatRealImaginary);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "Zload_wSopt");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 1597907535);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Power Gain with these\nSource and Load \nReflection Coefficients");
+	set(goId0, "FontSize", 274);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1163579384);
+ // Graphical Object:
+ set(goId0, "Right", 21053);
+ set(goId0, "Bottom", 12123);
+ set(goId0, "Left", 18295);
+	set(goId0, "Top", 11301);
+ set(goId0, "LineWidth", 1);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Conjugate Match Load \nImpedance if Source \nReflection Coefficient \nis Sopt for Minimum NF");
+	set(goId0, "FontSize", 274);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1896888730);
+ // Graphical Object:
+ set(goId0, "Right", 17134);
+ set(goId0, "Bottom", 12165);
+ set(goId0, "Left", 14401);
+	set(goId0, "Top", 11069);
+ set(goId0, "LineWidth", 1);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Plot");
+// Base Class Object:
+ 			set(goId0, "Uid", 1088141519);
+ // Graphical Object:
+ set(goId0, "Right", 7435);
+ set(goId0, "Bottom", 4482);
+ set(goId0, "Left", 1891);
+	set(goId0, "Top", 1099);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 1277);
+	set(goId0, "RightMargin", 124);
+	set(goId0, "TopMargin", 125);
+	set(goId0, "BottomMargin", 946);
+	set(goId0, "TitleFontSize", 247);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "xAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 492486012);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 247);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 247);
+	if (axisID != NULL) set(axisID, "MinValue", 700000000);
+	if (axisID != NULL) set(axisID, "MaxValue", 860000000);
+	if (axisID != NULL) set(axisID, "StepSize", 20000000);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "yAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1906280155);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 247);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 247);
+	if (axisID != NULL) set(axisID, "MinValue", 8);
+	if (axisID != NULL) set(axisID, "MaxValue", 18);
+	if (axisID != NULL) set(axisID, "StepSize", 2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1091131456);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 140);
+	if (axisID != NULL) set(axisID, "LineThick", 20);
+	if (axisID != NULL) set(axisID, "TickFontSize", 112);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1353970052);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 140);
+	if (axisID != NULL) set(axisID, "LineThick", 20);
+	if (axisID != NULL) set(axisID, "TickFontSize", 112);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl traceID;
+traceID = get_new(goId0, "Trace", "Pgain_assoc", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "Pgain_assoc");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 1974707619);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "FillHistogramsOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+decl traceID;
+traceID = get_new(goId0, "Trace", "MaxG", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "MaxG");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 5);
+	if (traceID != NULL) set(traceID, "Uid", 1459972649);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+decl traceID;
+traceID = get_new(goId0, "Trace", "dB(_10GHz_1Stage_HigherLevel0..S21)", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "dB(_10GHz_1Stage_HigherLevel0..S21)");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 6);
+	if (traceID != NULL) set(traceID, "Uid", 551458654);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Plot");
+// Base Class Object:
+ 			set(goId0, "Uid", 1664446311);
+ // Graphical Object:
+ set(goId0, "Right", 13554);
+ set(goId0, "Bottom", 4453);
+ set(goId0, "Left", 8282);
+	set(goId0, "Top", 1157);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 858);
+	set(goId0, "RightMargin", 125);
+	set(goId0, "TopMargin", 125);
+	set(goId0, "BottomMargin", 949);
+	set(goId0, "TitleFontSize", 247);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "xAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 229074357);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 250);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 250);
+	if (axisID != NULL) set(axisID, "MinValue", 700000000);
+	if (axisID != NULL) set(axisID, "MaxValue", 860000000);
+	if (axisID != NULL) set(axisID, "StepSize", 20000000);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "yAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1399214351);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "UserLabel", "Stab(S)");
+	if (axisID != NULL) set(axisID, "FontSize", 247);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 247);
+	if (axisID != NULL) set(axisID, "MinValue", 0.2);
+	if (axisID != NULL) set(axisID, "MaxValue", 1.2);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 45388201);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 205);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 177);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1317494191);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 205);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 177);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl traceID;
+traceID = get_new(goId0, "Trace", "stab_fact(_10GHz_1Stage_HigherLevel0..S)", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "stab_fact(_10GHz_1Stage_HigherLevel0..S)");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 80952109);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "S11_at_m1=dB(_10GHz_1Stage_HigherLevel0..S11[ssm1])");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1715550419);
+ // Graphical Object:
+ set(goId0, "Right", 6834);
+ set(goId0, "Bottom", 16064);
+ set(goId0, "Left", 6834);
+	set(goId0, "Top", 16064);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 1754563977);
+ // Graphical Object:
+ set(goId0, "Right", 13396);
+ set(goId0, "Bottom", 7438);
+ set(goId0, "Left", 10953);
+	set(goId0, "Top", 6426);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 322);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 274);
+	set(goId0, "NumDigits", 3);
+	set(goId0, "LabelOnOff", FALSE);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "Title", "dB(S11)");
+	set(goId0, "TitleFontSize", 222);
+decl traceID;
+traceID = get_new(goId0, "Trace", "S11_at_m1", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "S11_at_m1");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 519766070);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "S12_at_m1=dB(_10GHz_1Stage_HigherLevel0..S12[ssm1])");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 333526847);
+ // Graphical Object:
+ set(goId0, "Right", 6836);
+ set(goId0, "Bottom", 16051);
+ set(goId0, "Left", 6836);
+	set(goId0, "Top", 16051);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "S21_at_m1=dB(_10GHz_1Stage_HigherLevel0..S21[ssm1])");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 492136900);
+ // Graphical Object:
+ set(goId0, "Right", 6824);
+ set(goId0, "Bottom", 16063);
+ set(goId0, "Left", 6824);
+	set(goId0, "Top", 16063);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "S22_at_m1=dB(_10GHz_1Stage_HigherLevel0..S22[ssm1])");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1605109502);
+ // Graphical Object:
+ set(goId0, "Right", 6835);
+ set(goId0, "Bottom", 16065);
+ set(goId0, "Left", 6835);
+	set(goId0, "Top", 16065);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 1593695917);
+ // Graphical Object:
+ set(goId0, "Right", 18010);
+ set(goId0, "Bottom", 7465);
+ set(goId0, "Left", 15868);
+	set(goId0, "Top", 6408);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 322);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 274);
+	set(goId0, "NumDigits", 3);
+	set(goId0, "LabelOnOff", FALSE);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "Title", "dB(S21)");
+	set(goId0, "TitleFontSize", 222);
+decl traceID;
+traceID = get_new(goId0, "Trace", "S21_at_m1", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "S21_at_m1");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 849887753);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 1139290607);
+ // Graphical Object:
+ set(goId0, "Right", 15679);
+ set(goId0, "Bottom", 7460);
+ set(goId0, "Left", 13537);
+	set(goId0, "Top", 6428);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 322);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 274);
+	set(goId0, "NumDigits", 3);
+	set(goId0, "LabelOnOff", FALSE);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "Title", "dB(S12)");
+	set(goId0, "TitleFontSize", 222);
+decl traceID;
+traceID = get_new(goId0, "Trace", "S12_at_m1", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "S12_at_m1");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 97362147);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 1792310967);
+ // Graphical Object:
+ set(goId0, "Right", 20341);
+ set(goId0, "Bottom", 7458);
+ set(goId0, "Left", 18199);
+	set(goId0, "Top", 6401);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 322);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 274);
+	set(goId0, "NumDigits", 3);
+	set(goId0, "LabelOnOff", FALSE);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "Title", "dB(S22)");
+	set(goId0, "TitleFontSize", 222);
+decl traceID;
+traceID = get_new(goId0, "Trace", "S22_at_m1", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "S22_at_m1");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 2038112959);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Matching For Gain");
+	set(goId0, "FontSize", 486);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 2078197137);
+ // Graphical Object:
+ set(goId0, "Right", 13267);
+ set(goId0, "Bottom", 8341);
+ set(goId0, "Left", 9242);
+	set(goId0, "Top", 7855);
+ set(goId0, "LineWidth", 1);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Box");
+// Base Class Object:
+ 			set(goId0, "Uid", 811745837);
+ // Graphical Object:
+ set(goId0, "Right", 18364);
+ set(goId0, "Bottom", 10344);
+ set(goId0, "Left", 7417);
+	set(goId0, "Top", 7733);
+ set(goId0, "LineWidth", 14);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Matching For Noise Figure");
+	set(goId0, "FontSize", 486);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 163739551);
+ // Graphical Object:
+ set(goId0, "Right", 13231);
+ set(goId0, "Bottom", 11395);
+ set(goId0, "Left", 7492);
+	set(goId0, "Top", 10909);
+ set(goId0, "LineWidth", 1);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Box");
+// Base Class Object:
+ 			set(goId0, "Uid", 1775552763);
+ // Graphical Object:
+ set(goId0, "Right", 22393);
+ set(goId0, "Bottom", 15039);
+ set(goId0, "Left", 7306);
+	set(goId0, "Top", 10598);
+ set(goId0, "LineWidth", 14);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 1104602317);
+ // Graphical Object:
+ set(goId0, "Right", 10369);
+ set(goId0, "Bottom", 7266);
+ set(goId0, "Left", 8091);
+	set(goId0, "Top", 6578);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 72);
+	set(goId0, "RightMargin", 72);
+	set(goId0, "TopMargin", 0);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 248);
+	set(goId0, "Format", ddsFormatEngineering);
+	set(goId0, "NumDigits", 3);
+	set(goId0, "LabelOnOff", FALSE);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "TitleFontSize", 278);
+decl traceID;
+traceID = get_new(goId0, "Trace", "_10GHz_1Stage_HigherLevel0..freq[ssm1]", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "_10GHz_1Stage_HigherLevel0..freq[ssm1]");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 53021147);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "RF Frequency");
+	set(goId0, "FontSize", 278);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 12909519);
+ // Graphical Object:
+ set(goId0, "Right", 9728);
+ set(goId0, "Bottom", 6428);
+ set(goId0, "Left", 8039);
+	set(goId0, "Top", 6150);
+ set(goId0, "LineWidth", 1);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Plot");
+// Base Class Object:
+ 			set(goId0, "Uid", 241545592);
+ // Graphical Object:
+ set(goId0, "Right", 18887);
+ set(goId0, "Bottom", 6476);
+ set(goId0, "Left", 14143);
+	set(goId0, "Top", 4652);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 500);
+	set(goId0, "RightMargin", 110);
+	set(goId0, "TopMargin", 373);
+	set(goId0, "BottomMargin", 1093);
+	set(goId0, "Title", "RF Frequency Selector");
+	set(goId0, "TitleFontSize", 248);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "xAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 380055465);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "UserLabel", "freq");
+	if (axisID != NULL) set(axisID, "FontSize", 220);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 220);
+	if (axisID != NULL) set(axisID, "MinValue", 700000000);
+	if (axisID != NULL) set(axisID, "MaxValue", 860000000);
+	if (axisID != NULL) set(axisID, "StepSize", 20000000);
+	if (axisID != NULL) set(axisID, "Format", ddsFormatEngineering);
+	if (axisID != NULL) set(axisID, "NumDigits", 2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "yAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 900392142);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "UserLabel", "index");
+	if (axisID != NULL) set(axisID, "FontSize", 1);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 1);
+	if (axisID != NULL) set(axisID, "AutoscaleOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "MinValue", 0);
+	if (axisID != NULL) set(axisID, "MaxValue", 2000000);
+	if (axisID != NULL) set(axisID, "StepSize", 2000000);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 489565043);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 166);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 138);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 1);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 584468367);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 166);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 138);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl traceID;
+traceID = get_new(goId0, "Trace", "vs([0::sweep_size(_10GHz_1Stage_HigherLevel0..freq)-1],_10GHz_1Stage_HigherLevel0..freq)", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "vs([0::sweep_size(_10GHz_1Stage_HigherLevel0..freq)-1],_10GHz_1Stage_HigherLevel0..freq)");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 1783785169);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 42);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+decl markerID;
+markerID = get_new(traceID, "MarkerNew", "ssm1", "2000000000.00000000000000000000000000000000", 0, "");
+// Base Class Object:
+ 			set(markerID, "Name", "default");
+ 			set(markerID, "Uid", 1290726826);
+ // Graphical Object:
+ set(markerID, "Right", 18079);
+ set(markerID, "Bottom", 5707);
+ set(markerID, "Left", 15122);
+	set(markerID, "Top", 5382);
+ set(markerID, "Zrot", 0.000000);
+ set(markerID, "Yrot", 0.000000);
+ set(markerID, "Xrot", 0.000000);
+ set(markerID, "Status", 0);
+ set(markerID, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+// Marker:
+                    	if (markerID != NULL) set(markerID, "DataScript", "trcdata");
+						if (markerID != NULL) set(markerID, "DeltaModeStatus", 0);
+						if (markerID != NULL) set(markerID, "Format", 0);
+                    	if (markerID != NULL) set(markerID, "NumDigits", 3);
+                    	if (markerID != NULL) set(markerID, "ComplexNumberFormat", 1);
+                    	if (markerID != NULL) set(markerID, "AuxFormat", 0);
+						if (markerID != NULL) set(markerID, "AuxNumDigits", 3);
+						if (markerID != NULL) set(markerID, "AuxType", 0);
+                    	if (markerID != NULL) set(markerID, "AuxZ", "1");
+                    	if (markerID != NULL) set(markerID, "AuxComplexNumberFormat", 0);
+// More marker:
+              	if (markerID != NULL) set(markerID, "MkrLabelFontSize", 167);
+              	if (markerID != NULL) set(markerID, "MkrLabelColor", 0);
+              	if (markerID != NULL) set(markerID, "MkrReadoutFontSize", 1);
+              	if (markerID != NULL) set(markerID, "MkrReadoutColor", 0);
+              	if (markerID != NULL) set(markerID, "MkrReadoutLeft", 15056);
+			  	if (markerID != NULL) set(markerID, "MkrReadoutRight", 15262);
+			  	if (markerID != NULL) set(markerID, "MkrReadoutBottom", 5155);
+			  	if (markerID != NULL) set(markerID, "MkrReadoutTop", 5058);
+              	if (markerID != NULL) set(markerID, "MkrIndicatorColor", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Maximum Available Gain, Associated \nPower Gain (input matched for NFmin, \noutput then conjugately matched), and dB(S21)");
+	set(goId0, "FontSize", 273);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1955210488);
+ // Graphical Object:
+ set(goId0, "Right", 7891);
+ set(goId0, "Bottom", 837);
+ set(goId0, "Left", 2251);
+	set(goId0, "Top", 18);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 1560004043);
+ // Graphical Object:
+ set(goId0, "Right", 10180);
+ set(goId0, "Bottom", 12890);
+ set(goId0, "Left", 7812);
+	set(goId0, "Top", 11879);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 350);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 260);
+	set(goId0, "NumDigits", 3);
+	set(goId0, "LabelOnOff", FALSE);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "Title", "NFmin, dB");
+	set(goId0, "TitleFontSize", 250);
+decl traceID;
+traceID = get_new(goId0, "Trace", "_10GHz_1Stage_HigherLevel0..NFmin[ssm1]", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "_10GHz_1Stage_HigherLevel0..NFmin[ssm1]");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 648292212);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", " System\nImpedance");
+	set(goId0, "FontSize", 278);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1727547672);
+ // Graphical Object:
+ set(goId0, "Right", 20927);
+ set(goId0, "Bottom", 9728);
+ set(goId0, "Left", 19635);
+	set(goId0, "Top", 9172);
+ set(goId0, "LineWidth", 1);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 67862143);
+ // Graphical Object:
+ set(goId0, "Right", 21418);
+ set(goId0, "Bottom", 10481);
+ set(goId0, "Left", 19732);
+	set(goId0, "Top", 9815);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 0);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 274);
+	set(goId0, "NumDigits", 3);
+	set(goId0, "LabelOnOff", FALSE);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "TitleFontSize", 140);
+decl traceID;
+traceID = get_new(goId0, "Trace", "_10GHz_1Stage_HigherLevel0..Z0[0]", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "_10GHz_1Stage_HigherLevel0..Z0[0]");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 1420177850);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 1669034259);
+ // Graphical Object:
+ set(goId0, "Right", 21679);
+ set(goId0, "Bottom", 9003);
+ set(goId0, "Left", 19387);
+	set(goId0, "Top", 8349);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 0);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 260);
+	set(goId0, "NumDigits", 3);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "TitleFontSize", 140);
+decl traceID;
+traceID = get_new(goId0, "Trace", "StabK1", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "StabK1");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 1563989807);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Stability\n Factor");
+	set(goId0, "FontSize", 278);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1809303222);
+ // Graphical Object:
+ set(goId0, "Right", 20486);
+ set(goId0, "Bottom", 8261);
+ set(goId0, "Left", 19567);
+	set(goId0, "Top", 7705);
+ set(goId0, "LineWidth", 1);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Plot");
+// Base Class Object:
+ 			set(goId0, "Uid", 264355713);
+ // Graphical Object:
+ set(goId0, "Right", 18462);
+ set(goId0, "Bottom", 4384);
+ set(goId0, "Left", 13658);
+	set(goId0, "Top", 1097);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 1007);
+	set(goId0, "RightMargin", 124);
+	set(goId0, "TopMargin", 125);
+	set(goId0, "BottomMargin", 946);
+	set(goId0, "TitleFontSize", 247);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 273265186);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 247);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 247);
+	if (axisID != NULL) set(axisID, "MinValue", 700000000);
+	if (axisID != NULL) set(axisID, "MaxValue", 860000000);
+	if (axisID != NULL) set(axisID, "StepSize", 20000000);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1608342154);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "UserLabel", "NFmin");
+	if (axisID != NULL) set(axisID, "FontSize", 247);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 247);
+	if (axisID != NULL) set(axisID, "MinValue", 0.3);
+	if (axisID != NULL) set(axisID, "MaxValue", 0.55);
+	if (axisID != NULL) set(axisID, "StepSize", 0.05);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 727142370);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 247);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 247);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1608453981);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 247);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 247);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl traceID;
+traceID = get_new(goId0, "Trace", "_10GHz_1Stage_HigherLevel0..NFmin", "X Axis", "Y Axis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "_10GHz_1Stage_HigherLevel0..NFmin");
+	if (traceID != NULL) set(traceID, "XaxisName", "X Axis");
+	if (traceID != NULL) set(traceID, "YaxisName", "Y Axis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 1187984272);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "FillHistogramsOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Stability Factor, K");
+	set(goId0, "FontSize", 273);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 653808109);
+ // Graphical Object:
+ set(goId0, "Right", 11613);
+ set(goId0, "Bottom", 1135);
+ set(goId0, "Left", 9526);
+	set(goId0, "Top", 862);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Minimum Noise Figure, dB");
+	set(goId0, "FontSize", 273);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 613518707);
+ // Graphical Object:
+ set(goId0, "Right", 17850);
+ set(goId0, "Bottom", 1106);
+ set(goId0, "Left", 14819);
+	set(goId0, "Top", 833);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Optimal Source Reflection Coefficients for Mininum NF, \nSimultaneous Conjugate Matching, and Load Reflection \nCoefficient for Simultaneous Conjugate Matching, and \nwith source matched for NFmin");
+	set(goId0, "FontSize", 234);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 995133111);
+ // Graphical Object:
+ set(goId0, "Right", 6574);
+ set(goId0, "Bottom", 6164);
+ set(goId0, "Left", 636);
+	set(goId0, "Top", 5228);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Box");
+// Base Class Object:
+ 			set(goId0, "Uid", 2067180370);
+ // Graphical Object:
+ set(goId0, "Right", 15699);
+ set(goId0, "Bottom", 8788);
+ set(goId0, "Left", 14945);
+	set(goId0, "Top", 8188);
+ set(goId0, "LineWidth", 19);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+decl goId0;
+goId0 = get_new(pageId, "Line");
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1676972543);
+ // Graphical Object:
+ set(goId0, "Right", 14926);
+ set(goId0, "Bottom", 8636);
+ set(goId0, "Left", 14672);
+	set(goId0, "Top", 8598);
+ set(goId0, "LineWidth", 19);
+ // Need to add Popup, LocalPopup, Owner...
+// Line...
+	set(goId0, "StartX", 14945);
+	set(goId0, "StartY", 8617);
+	set(goId0, "EndX", 14653);
+	set(goId0, "EndY", 8617);
+decl goId0;
+goId0 = get_new(pageId, "Line");
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1249808980);
+ // Graphical Object:
+ set(goId0, "Right", 15993);
+ set(goId0, "Bottom", 8327);
+ set(goId0, "Left", 15663);
+	set(goId0, "Top", 8289);
+ set(goId0, "LineWidth", 19);
+ // Need to add Popup, LocalPopup, Owner...
+// Line...
+	set(goId0, "StartX", 15682);
+	set(goId0, "StartY", 8308);
+	set(goId0, "EndX", 15974);
+	set(goId0, "EndY", 8308);
+decl goId0;
+goId0 = get_new(pageId, "Line");
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 899395119);
+ // Graphical Object:
+ set(goId0, "Right", 16009);
+ set(goId0, "Bottom", 8653);
+ set(goId0, "Left", 15663);
+	set(goId0, "Top", 8615);
+ set(goId0, "LineWidth", 19);
+ // Need to add Popup, LocalPopup, Owner...
+// Line...
+	set(goId0, "StartX", 15682);
+	set(goId0, "StartY", 8634);
+	set(goId0, "EndX", 15990);
+	set(goId0, "EndY", 8634);
+decl goId0;
+goId0 = get_new(pageId, "Polyline");
+// Polyline:
+decl plyPtId;
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 16155);
+set(plyPtId, "Y", 8196);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 16154);
+set(plyPtId, "Y", 8462);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 16449);
+set(plyPtId, "Y", 8462);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 16348);
+set(plyPtId, "Y", 8356);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 16362);
+set(plyPtId, "Y", 8587);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 16445);
+set(plyPtId, "Y", 8458);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1741701860);
+ // Graphical Object:
+ set(goId0, "Right", 16449);
+ set(goId0, "Bottom", 8587);
+ set(goId0, "Left", 16154);
+	set(goId0, "Top", 8196);
+ set(goId0, "LineWidth", 19);
+ // Need to add Popup, LocalPopup, Owner...
+// Line...
+	set(goId0, "StartX", 16155);
+	set(goId0, "StartY", 8196);
+	set(goId0, "EndX", 16445);
+	set(goId0, "EndY", 8458);
+decl goId0;
+goId0 = get_new(pageId, "Polyline");
+// Polyline:
+decl plyPtId;
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 14592);
+set(plyPtId, "Y", 8177);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 14592);
+set(plyPtId, "Y", 8430);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 14398);
+set(plyPtId, "Y", 8430);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 14467);
+set(plyPtId, "Y", 8333);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 14463);
+set(plyPtId, "Y", 8536);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 14389);
+set(plyPtId, "Y", 8430);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 14394);
+set(plyPtId, "Y", 8425);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 118734581);
+ // Graphical Object:
+ set(goId0, "Right", 14592);
+ set(goId0, "Bottom", 8536);
+ set(goId0, "Left", 14389);
+	set(goId0, "Top", 8177);
+ set(goId0, "LineWidth", 19);
+ // Need to add Popup, LocalPopup, Owner...
+// Line...
+	set(goId0, "StartX", 14592);
+	set(goId0, "StartY", 8177);
+	set(goId0, "EndX", 14394);
+	set(goId0, "EndY", 8425);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Zsource");
+	set(goId0, "FontSize", 221);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 184733147);
+ // Graphical Object:
+ set(goId0, "Right", 14928);
+ set(goId0, "Bottom", 8195);
+ set(goId0, "Left", 14083);
+	set(goId0, "Top", 7974);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Zload");
+	set(goId0, "FontSize", 221);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1332410213);
+ // Graphical Object:
+ set(goId0, "Right", 16492);
+ set(goId0, "Bottom", 8195);
+ set(goId0, "Left", 15921);
+	set(goId0, "Top", 7974);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "DUT*");
+	set(goId0, "FontSize", 221);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 2084863409);
+ // Graphical Object:
+ set(goId0, "Right", 15636);
+ set(goId0, "Bottom", 8610);
+ set(goId0, "Left", 15065);
+	set(goId0, "Top", 8389);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Line");
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 890274956);
+ // Graphical Object:
+ set(goId0, "Right", 14910);
+ set(goId0, "Bottom", 8339);
+ set(goId0, "Left", 14656);
+	set(goId0, "Top", 8301);
+ set(goId0, "LineWidth", 19);
+ // Need to add Popup, LocalPopup, Owner...
+// Line...
+	set(goId0, "StartX", 14929);
+	set(goId0, "StartY", 8320);
+	set(goId0, "EndX", 14637);
+	set(goId0, "EndY", 8320);
+decl goId0;
+goId0 = get_new(pageId, "Box");
+// Base Class Object:
+ 			set(goId0, "Uid", 1796368785);
+ // Graphical Object:
+ set(goId0, "Right", 14601);
+ set(goId0, "Bottom", 14797);
+ set(goId0, "Left", 13847);
+	set(goId0, "Top", 14197);
+ set(goId0, "LineWidth", 19);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+decl goId0;
+goId0 = get_new(pageId, "Line");
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1392440522);
+ // Graphical Object:
+ set(goId0, "Right", 13828);
+ set(goId0, "Bottom", 14645);
+ set(goId0, "Left", 13574);
+	set(goId0, "Top", 14607);
+ set(goId0, "LineWidth", 19);
+ // Need to add Popup, LocalPopup, Owner...
+// Line...
+	set(goId0, "StartX", 13847);
+	set(goId0, "StartY", 14626);
+	set(goId0, "EndX", 13555);
+	set(goId0, "EndY", 14626);
+decl goId0;
+goId0 = get_new(pageId, "Line");
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1315767335);
+ // Graphical Object:
+ set(goId0, "Right", 14895);
+ set(goId0, "Bottom", 14336);
+ set(goId0, "Left", 14565);
+	set(goId0, "Top", 14298);
+ set(goId0, "LineWidth", 19);
+ // Need to add Popup, LocalPopup, Owner...
+// Line...
+	set(goId0, "StartX", 14584);
+	set(goId0, "StartY", 14317);
+	set(goId0, "EndX", 14876);
+	set(goId0, "EndY", 14317);
+decl goId0;
+goId0 = get_new(pageId, "Line");
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 154668627);
+ // Graphical Object:
+ set(goId0, "Right", 14911);
+ set(goId0, "Bottom", 14662);
+ set(goId0, "Left", 14565);
+	set(goId0, "Top", 14624);
+ set(goId0, "LineWidth", 19);
+ // Need to add Popup, LocalPopup, Owner...
+// Line...
+	set(goId0, "StartX", 14584);
+	set(goId0, "StartY", 14643);
+	set(goId0, "EndX", 14892);
+	set(goId0, "EndY", 14643);
+decl goId0;
+goId0 = get_new(pageId, "Polyline");
+// Polyline:
+decl plyPtId;
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 15052);
+set(plyPtId, "Y", 14222);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 15056);
+set(plyPtId, "Y", 14471);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 15351);
+set(plyPtId, "Y", 14471);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 15250);
+set(plyPtId, "Y", 14365);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 15264);
+set(plyPtId, "Y", 14596);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 15347);
+set(plyPtId, "Y", 14467);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 174432625);
+ // Graphical Object:
+ set(goId0, "Right", 15351);
+ set(goId0, "Bottom", 14596);
+ set(goId0, "Left", 15052);
+	set(goId0, "Top", 14222);
+ set(goId0, "LineWidth", 19);
+ // Need to add Popup, LocalPopup, Owner...
+// Line...
+	set(goId0, "StartX", 15052);
+	set(goId0, "StartY", 14222);
+	set(goId0, "EndX", 15347);
+	set(goId0, "EndY", 14467);
+decl goId0;
+goId0 = get_new(pageId, "Polyline");
+// Polyline:
+decl plyPtId;
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 13494);
+set(plyPtId, "Y", 14186);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 13494);
+set(plyPtId, "Y", 14439);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 13300);
+set(plyPtId, "Y", 14439);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 13369);
+set(plyPtId, "Y", 14342);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 13365);
+set(plyPtId, "Y", 14545);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 13291);
+set(plyPtId, "Y", 14439);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 13296);
+set(plyPtId, "Y", 14434);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 2025289933);
+ // Graphical Object:
+ set(goId0, "Right", 13494);
+ set(goId0, "Bottom", 14545);
+ set(goId0, "Left", 13291);
+	set(goId0, "Top", 14186);
+ set(goId0, "LineWidth", 19);
+ // Need to add Popup, LocalPopup, Owner...
+// Line...
+	set(goId0, "StartX", 13494);
+	set(goId0, "StartY", 14186);
+	set(goId0, "EndX", 13296);
+	set(goId0, "EndY", 14434);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Zopt");
+	set(goId0, "FontSize", 221);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 833131921);
+ // Graphical Object:
+ set(goId0, "Right", 13457);
+ set(goId0, "Bottom", 14204);
+ set(goId0, "Left", 12985);
+	set(goId0, "Top", 13983);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Conjugate match \nZload if source \nimpedance is Zopt");
+	set(goId0, "FontSize", 221);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 691593908);
+ // Graphical Object:
+ set(goId0, "Right", 16720);
+ set(goId0, "Bottom", 14144);
+ set(goId0, "Left", 14807);
+	set(goId0, "Top", 13481);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "DUT*");
+	set(goId0, "FontSize", 221);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1913827605);
+ // Graphical Object:
+ set(goId0, "Right", 14538);
+ set(goId0, "Bottom", 14619);
+ set(goId0, "Left", 13967);
+	set(goId0, "Top", 14398);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Line");
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 693734902);
+ // Graphical Object:
+ set(goId0, "Right", 13812);
+ set(goId0, "Bottom", 14348);
+ set(goId0, "Left", 13558);
+	set(goId0, "Top", 14310);
+ set(goId0, "LineWidth", 19);
+ // Need to add Popup, LocalPopup, Owner...
+// Line...
+	set(goId0, "StartX", 13831);
+	set(goId0, "StartY", 14329);
+	set(goId0, "EndX", 13539);
+	set(goId0, "EndY", 14329);
+decl goId0;
+goId0 = get_new(pageId, "Polyline");
+// Polyline:
+decl plyPtId;
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 13402);
+set(plyPtId, "Y", 12925);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 13311);
+set(plyPtId, "Y", 13784);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 13201);
+set(plyPtId, "Y", 13473);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 13439);
+set(plyPtId, "Y", 13528);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 13293);
+set(plyPtId, "Y", 13766);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 630190798);
+ // Graphical Object:
+ set(goId0, "Right", 13439);
+ set(goId0, "Bottom", 13784);
+ set(goId0, "Left", 13201);
+	set(goId0, "Top", 12925);
+ set(goId0, "LineWidth", 19);
+ // Need to add Popup, LocalPopup, Owner...
+// Line...
+	set(goId0, "StartX", 13402);
+	set(goId0, "StartY", 12925);
+	set(goId0, "EndX", 13293);
+	set(goId0, "EndY", 13766);
+decl goId0;
+goId0 = get_new(pageId, "Polyline");
+// Polyline:
+decl plyPtId;
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 16235);
+set(plyPtId, "Y", 12889);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 16016);
+set(plyPtId, "Y", 13400);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 15979);
+set(plyPtId, "Y", 13126);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 16235);
+set(plyPtId, "Y", 13236);
+plyPtId = get_new(goId0, "Point");
+set(plyPtId, "X", 15997);
+set(plyPtId, "Y", 13382);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 687934365);
+ // Graphical Object:
+ set(goId0, "Right", 16235);
+ set(goId0, "Bottom", 13400);
+ set(goId0, "Left", 15979);
+	set(goId0, "Top", 12889);
+ set(goId0, "LineWidth", 19);
+ // Need to add Popup, LocalPopup, Owner...
+// Line...
+	set(goId0, "StartX", 16235);
+	set(goId0, "StartY", 12889);
+	set(goId0, "EndX", 15997);
+	set(goId0, "EndY", 13382);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "*DUT= Device Under Test\n(simulated circuit or device)");
+	set(goId0, "FontSize", 221);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1752674080);
+ // Graphical Object:
+ set(goId0, "Right", 20412);
+ set(goId0, "Bottom", 14842);
+ set(goId0, "Left", 17530);
+	set(goId0, "Top", 14400);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "If K <1, indicating potential instability.");
+	set(goId0, "FontSize", 273);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 607279142);
+ // Graphical Object:
+ set(goId0, "Right", 23045);
+ set(goId0, "Bottom", 683);
+ set(goId0, "Left", 18697);
+	set(goId0, "Top", 410);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+// Base Class Object:
+ 			set(pageId, "Name", "S-pars, Noise Figure, Stability");
+ 			set(pageId, "Uid", 1091447735);
+ 	set(pageId, "Invisible", FALSE);
+
+set(ddWinId, "CurrentPage", 1091447735);
+	set(ddWinId, "PageViewRect_1091447735", list(236, 15379, 24459, -99));
+set(ddoId, "EraseAll", 0);
+set(ddoId, "DrawAll", 0);
+pageId = get_new(ddoId, "Page");
+decl goId0;
+goId0 = get_new(pageId, "Plot");
+// Base Class Object:
+ 			set(goId0, "Uid", 218680890);
+ // Graphical Object:
+ set(goId0, "Right", 6055);
+ set(goId0, "Bottom", -2060);
+ set(goId0, "Left", 2065);
+	set(goId0, "Top", -4732);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 500);
+	set(goId0, "RightMargin", 100);
+	set(goId0, "TopMargin", 125);
+	set(goId0, "BottomMargin", 500);
+	set(goId0, "TitleFontSize", 179);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "xAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 465183871);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 179);
+	if (axisID != NULL) set(axisID, "MinValue", 0);
+	if (axisID != NULL) set(axisID, "MaxValue", 16);
+	if (axisID != NULL) set(axisID, "StepSize", 2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "yAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 562132826);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 179);
+	if (axisID != NULL) set(axisID, "MinValue", 0.2);
+	if (axisID != NULL) set(axisID, "MaxValue", 1.2);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1946897167);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 460737857);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl traceID;
+traceID = get_new(goId0, "Trace", "StabK2", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "StabK2");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 1126892240);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Plot");
+// Base Class Object:
+ 			set(goId0, "Uid", 142557258);
+ // Graphical Object:
+ set(goId0, "Right", 356);
+ set(goId0, "Bottom", -2183);
+ set(goId0, "Left", -3556);
+	set(goId0, "Top", -4716);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 500);
+	set(goId0, "RightMargin", 100);
+	set(goId0, "TopMargin", 125);
+	set(goId0, "BottomMargin", 500);
+	set(goId0, "TitleFontSize", 179);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "xAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 241042080);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 179);
+	if (axisID != NULL) set(axisID, "MinValue", 0);
+	if (axisID != NULL) set(axisID, "MaxValue", 16);
+	if (axisID != NULL) set(axisID, "StepSize", 2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "yAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 579880760);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 179);
+	if (axisID != NULL) set(axisID, "MinValue", 11);
+	if (axisID != NULL) set(axisID, "MaxValue", 15);
+	if (axisID != NULL) set(axisID, "StepSize", 1);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1259904177);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 854153211);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl traceID;
+traceID = get_new(goId0, "Trace", "dB(Stab_S_21)", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "dB(Stab_S_21)");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 35916351);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "FillHistogramsOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 597141235);
+ // Graphical Object:
+ set(goId0, "Right", -1608);
+ set(goId0, "Bottom", 5719);
+ set(goId0, "Left", -3240);
+	set(goId0, "Top", 3738);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 0);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 179);
+	set(goId0, "NumDigits", 3);
+	set(goId0, "LabelOnOff", FALSE);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "TitleFontSize", 140);
+decl traceID;
+traceID = get_new(goId0, "Trace", "indep(_10GHz_1Stage_HigherLevel1..HB.RFpower[0,::])", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "indep(_10GHz_1Stage_HigherLevel1..HB.RFpower[0,::])");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 1116924549);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "dB(S21) versus RF Power, \n    and Frequency");
+	set(goId0, "FontSize", 205);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1004256108);
+ // Graphical Object:
+ set(goId0, "Right", -388);
+ set(goId0, "Bottom", -4618);
+ set(goId0, "Left", -2962);
+	set(goId0, "Top", -5028);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "  dB(S21) versus Frequency, \n         and RF Power");
+	set(goId0, "FontSize", 205);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 18515459);
+ // Graphical Object:
+ set(goId0, "Right", -13);
+ set(goId0, "Bottom", -1313);
+ set(goId0, "Left", -2779);
+	set(goId0, "Top", -1723);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "    Stability Factor, StabK2, \nversus Frequency, and RF Power");
+	set(goId0, "FontSize", 205);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 234758914);
+ // Graphical Object:
+ set(goId0, "Right", 6640);
+ set(goId0, "Bottom", -1236);
+ set(goId0, "Left", 2798);
+	set(goId0, "Top", -1646);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "    Stability Factor, StabK2, \nversus RF Power, and Frequency");
+	set(goId0, "FontSize", 205);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1424792205);
+ // Graphical Object:
+ set(goId0, "Right", 6618);
+ set(goId0, "Bottom", -4672);
+ set(goId0, "Left", 2776);
+	set(goId0, "Top", -5082);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Simulated RF input\npower levels, dBm");
+	set(goId0, "FontSize", 205);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1421259728);
+ // Graphical Object:
+ set(goId0, "Right", -1745);
+ set(goId0, "Bottom", 3628);
+ set(goId0, "Left", -3474);
+	set(goId0, "Top", 3218);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Plot");
+// Base Class Object:
+ 			set(goId0, "Uid", 1184877774);
+ // Graphical Object:
+ set(goId0, "Right", 323);
+ set(goId0, "Bottom", 1813);
+ set(goId0, "Left", -3662);
+	set(goId0, "Top", -1373);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 500);
+	set(goId0, "RightMargin", 100);
+	set(goId0, "TopMargin", 125);
+	set(goId0, "BottomMargin", 500);
+	set(goId0, "TitleFontSize", 179);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 654013113);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 178);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 178);
+	if (axisID != NULL) set(axisID, "MinValue", 700000000);
+	if (axisID != NULL) set(axisID, "MaxValue", 860000000);
+	if (axisID != NULL) set(axisID, "StepSize", 20000000);
+	if (axisID != NULL) set(axisID, "Format", ddsFormatEngineering);
+	if (axisID != NULL) set(axisID, "NumDigits", 2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1913642673);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "UserLabel", "dB(S(2,1))");
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", 11);
+	if (axisID != NULL) set(axisID, "MaxValue", 15);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1130929097);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1315227615);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl traceID;
+traceID = get_new(goId0, "Trace", "permute(dB(Stab_S_21))", "X Axis", "Y Axis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "permute(dB(Stab_S_21))");
+	if (traceID != NULL) set(traceID, "XaxisName", "X Axis");
+	if (traceID != NULL) set(traceID, "YaxisName", "Y Axis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 236585660);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Plot");
+// Base Class Object:
+ 			set(goId0, "Uid", 408290835);
+ // Graphical Object:
+ set(goId0, "Right", 6053);
+ set(goId0, "Bottom", 1894);
+ set(goId0, "Left", 1948);
+	set(goId0, "Top", -1264);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 500);
+	set(goId0, "RightMargin", 100);
+	set(goId0, "TopMargin", 125);
+	set(goId0, "BottomMargin", 500);
+	set(goId0, "TitleFontSize", 179);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1304196224);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 178);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 178);
+	if (axisID != NULL) set(axisID, "MinValue", 700000000);
+	if (axisID != NULL) set(axisID, "MaxValue", 860000000);
+	if (axisID != NULL) set(axisID, "StepSize", 20000000);
+	if (axisID != NULL) set(axisID, "Format", ddsFormatEngineering);
+	if (axisID != NULL) set(axisID, "NumDigits", 2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1662783715);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "UserLabel", "StabK2");
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", 0.2);
+	if (axisID != NULL) set(axisID, "MaxValue", 1.2);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 793069482);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1534974046);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl traceID;
+traceID = get_new(goId0, "Trace", "permute(StabK2)", "X Axis", "Y Axis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "permute(StabK2)");
+	if (traceID != NULL) set(traceID, "XaxisName", "X Axis");
+	if (traceID != NULL) set(traceID, "YaxisName", "Y Axis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 361885644);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "Stab_S_11=_10GHz_1Stage_HigherLevel1..HB.SmartSimulation1.b1[1]/_10GHz_1Stage_HigherLevel1..HB.SmartSimulation1.a1[1]");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 10293284);
+ // Graphical Object:
+ set(goId0, "Right", -2343);
+ set(goId0, "Bottom", 5932);
+ set(goId0, "Left", -2343);
+	set(goId0, "Top", 5932);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "Stab_S_12=_10GHz_1Stage_HigherLevel1..SM.SmartSimulation1.b1[2]/_10GHz_1Stage_HigherLevel1..SM.SmartSimulation1.a2[2]");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 534249985);
+ // Graphical Object:
+ set(goId0, "Right", -2336);
+ set(goId0, "Bottom", 5949);
+ set(goId0, "Left", -2336);
+	set(goId0, "Top", 5949);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "Stab_S_21=_10GHz_1Stage_HigherLevel1..HB.SmartSimulation1.b2[1]/_10GHz_1Stage_HigherLevel1..HB.SmartSimulation1.a1[1]");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1652424735);
+ // Graphical Object:
+ set(goId0, "Right", -2339);
+ set(goId0, "Bottom", 5934);
+ set(goId0, "Left", -2339);
+	set(goId0, "Top", 5934);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "Stab_S_22=_10GHz_1Stage_HigherLevel1..SM.SmartSimulation1.b2[2]/_10GHz_1Stage_HigherLevel1..SM.SmartSimulation1.a2[2]");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 729501670);
+ // Graphical Object:
+ set(goId0, "Right", -2355);
+ set(goId0, "Bottom", 5938);
+ set(goId0, "Left", -2355);
+	set(goId0, "Top", 5938);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Plot");
+// Base Class Object:
+ 			set(goId0, "Uid", 826544015);
+ // Graphical Object:
+ set(goId0, "Right", 11732);
+ set(goId0, "Bottom", -2086);
+ set(goId0, "Left", 7757);
+	set(goId0, "Top", -4787);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 500);
+	set(goId0, "RightMargin", 100);
+	set(goId0, "TopMargin", 125);
+	set(goId0, "BottomMargin", 500);
+	set(goId0, "TitleFontSize", 179);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 64988293);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 178);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 178);
+	if (axisID != NULL) set(axisID, "MinValue", 700000000);
+	if (axisID != NULL) set(axisID, "MaxValue", 860000000);
+	if (axisID != NULL) set(axisID, "StepSize", 20000000);
+	if (axisID != NULL) set(axisID, "Format", ddsFormatEngineering);
+	if (axisID != NULL) set(axisID, "NumDigits", 2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 91839450);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "UserLabel", "dB(S_22)");
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -10);
+	if (axisID != NULL) set(axisID, "MaxValue", 0);
+	if (axisID != NULL) set(axisID, "StepSize", 2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1646501288);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 2142161602);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl traceID;
+traceID = get_new(goId0, "Trace", "permute(dB(Stab_S_22))", "X Axis", "Y Axis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "permute(dB(Stab_S_22))");
+	if (traceID != NULL) set(traceID, "XaxisName", "X Axis");
+	if (traceID != NULL) set(traceID, "YaxisName", "Y Axis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 2136063930);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "Stab_det=Stab_S_11*Stab_S_22 -Stab_S_21*Stab_S_12");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1827963111);
+ // Graphical Object:
+ set(goId0, "Right", -2340);
+ set(goId0, "Bottom", 5951);
+ set(goId0, "Left", -2340);
+	set(goId0, "Top", 5951);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "StabK2=(1-mag(Stab_S_11)**2-mag(Stab_S_22)**2 +mag(Stab_det)**2)/(2*mag(Stab_S_12*Stab_S_21))");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 264193516);
+ // Graphical Object:
+ set(goId0, "Right", -2359);
+ set(goId0, "Bottom", 5941);
+ set(goId0, "Left", -2359);
+	set(goId0, "Top", 5941);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Plot");
+// Base Class Object:
+ 			set(goId0, "Uid", 629576850);
+ // Graphical Object:
+ set(goId0, "Right", 10006);
+ set(goId0, "Bottom", 6310);
+ set(goId0, "Left", 5853);
+	set(goId0, "Top", 3205);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 500);
+	set(goId0, "RightMargin", 100);
+	set(goId0, "TopMargin", 125);
+	set(goId0, "BottomMargin", 500);
+	set(goId0, "TitleFontSize", 179);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1748530848);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 178);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 178);
+	if (axisID != NULL) set(axisID, "MinValue", 700000000);
+	if (axisID != NULL) set(axisID, "MaxValue", 860000000);
+	if (axisID != NULL) set(axisID, "StepSize", 20000000);
+	if (axisID != NULL) set(axisID, "Format", ddsFormatEngineering);
+	if (axisID != NULL) set(axisID, "NumDigits", 2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 2055201324);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "UserLabel", "dB(S_12)");
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -20);
+	if (axisID != NULL) set(axisID, "MaxValue", -15);
+	if (axisID != NULL) set(axisID, "StepSize", 1);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 159441976);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 605826129);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl traceID;
+traceID = get_new(goId0, "Trace", "permute(dB(Stab_S_12))", "X Axis", "Y Axis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "permute(dB(Stab_S_12))");
+	if (traceID != NULL) set(traceID, "XaxisName", "X Axis");
+	if (traceID != NULL) set(traceID, "YaxisName", "Y Axis");
+	if (traceID != NULL) set(traceID, "Color", 5);
+	if (traceID != NULL) set(traceID, "Uid", 602894767);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "SmithChart");
+// Base Class Object:
+ 			set(goId0, "Uid", 1882305763);
+ // Graphical Object:
+ set(goId0, "Right", 11667);
+ set(goId0, "Bottom", 2546);
+ set(goId0, "Left", 7917);
+	set(goId0, "Top", -1204);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 500);
+	set(goId0, "RightMargin", 100);
+	set(goId0, "TopMargin", 125);
+	set(goId0, "BottomMargin", 500);
+	set(goId0, "TitleFontSize", 179);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1545682146);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 1);
+//Polar axis...
+	if (axisID != NULL) set(axisID, "IndepStop", 15);
+//Smith chart axis...
+	if (axisID != NULL) set(axisID, "AdmittanceColor", 104);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 675766677);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 1);
+//Polar axis...
+	if (axisID != NULL) set(axisID, "IndepStop", 15);
+//Smith chart axis...
+	if (axisID != NULL) set(axisID, "AdmittanceColor", 104);
+decl traceID;
+traceID = get_new(goId0, "Trace", "Stab_S_22", "X Axis", "Y Axis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "Stab_S_22");
+	if (traceID != NULL) set(traceID, "XaxisName", "X Axis");
+	if (traceID != NULL) set(traceID, "YaxisName", "Y Axis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 1895934567);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "FillHistogramsOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+decl markerID;
+markerID = get_new(traceID, "MarkerNew", "ssm2", "5.00000000000000000000000000000000", 2, "");
+// Base Class Object:
+ 			set(markerID, "Name", "default");
+ 			set(markerID, "Uid", 896155586);
+ // Graphical Object:
+ set(markerID, "Right", 16467);
+ set(markerID, "Bottom", 6009);
+ set(markerID, "Left", 13788);
+	set(markerID, "Top", 4150);
+ set(markerID, "Zrot", 0.000000);
+ set(markerID, "Yrot", 0.000000);
+ set(markerID, "Xrot", 0.000000);
+ set(markerID, "Status", 0);
+ set(markerID, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+// Marker:
+                    	if (markerID != NULL) set(markerID, "DataScript", "trcdata");
+						if (markerID != NULL) set(markerID, "DeltaModeStatus", 0);
+						if (markerID != NULL) set(markerID, "Format", 3);
+                    	if (markerID != NULL) set(markerID, "NumDigits", 3);
+                    	if (markerID != NULL) set(markerID, "ComplexNumberFormat", 1);
+                    	if (markerID != NULL) set(markerID, "AuxFormat", 0);
+						if (markerID != NULL) set(markerID, "AuxNumDigits", 3);
+						if (markerID != NULL) set(markerID, "AuxType", 0);
+                    	if (markerID != NULL) set(markerID, "AuxZ", "1");
+                    	if (markerID != NULL) set(markerID, "AuxComplexNumberFormat", 0);
+// More marker:
+              	if (markerID != NULL) set(markerID, "MkrLabelFontSize", 166);
+              	if (markerID != NULL) set(markerID, "MkrLabelColor", 0);
+              	if (markerID != NULL) set(markerID, "MkrReadoutFontSize", 180);
+              	if (markerID != NULL) set(markerID, "MkrReadoutColor", 0);
+              	if (markerID != NULL) set(markerID, "MkrReadoutLeft", 8878);
+			  	if (markerID != NULL) set(markerID, "MkrReadoutRight", 12277);
+			  	if (markerID != NULL) set(markerID, "MkrReadoutBottom", -77);
+			  	if (markerID != NULL) set(markerID, "MkrReadoutTop", -1053);
+              	if (markerID != NULL) set(markerID, "MkrIndicatorColor", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "SmithChart");
+// Base Class Object:
+ 			set(goId0, "Uid", 2057110133);
+ // Graphical Object:
+ set(goId0, "Right", 4974);
+ set(goId0, "Bottom", 6636);
+ set(goId0, "Left", 1224);
+	set(goId0, "Top", 2886);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 500);
+	set(goId0, "RightMargin", 100);
+	set(goId0, "TopMargin", 125);
+	set(goId0, "BottomMargin", 500);
+	set(goId0, "TitleFontSize", 179);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 200876998);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 1);
+//Polar axis...
+	if (axisID != NULL) set(axisID, "IndepStop", 15);
+//Smith chart axis...
+	if (axisID != NULL) set(axisID, "AdmittanceColor", 104);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1663511082);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 179);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 151);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 1);
+//Polar axis...
+	if (axisID != NULL) set(axisID, "IndepStop", 15);
+//Smith chart axis...
+	if (axisID != NULL) set(axisID, "AdmittanceColor", 104);
+decl traceID;
+traceID = get_new(goId0, "Trace", "Stab_S_11", "X Axis", "Y Axis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "Stab_S_11");
+	if (traceID != NULL) set(traceID, "XaxisName", "X Axis");
+	if (traceID != NULL) set(traceID, "YaxisName", "Y Axis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 1834410050);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "FillHistogramsOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "dB(S22) versus Frequency\n      and RF Power");
+	set(goId0, "FontSize", 205);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 362852279);
+ // Graphical Object:
+ set(goId0, "Right", 10930);
+ set(goId0, "Bottom", -4716);
+ set(goId0, "Left", 8394);
+	set(goId0, "Top", -5126);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "dB(S12) versus Frequency and RF Power");
+	set(goId0, "FontSize", 205);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 142732343);
+ // Graphical Object:
+ set(goId0, "Right", 10087);
+ set(goId0, "Bottom", 3152);
+ set(goId0, "Left", 6168);
+	set(goId0, "Top", 2947);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "S11 versus Frequency, and RF Power");
+	set(goId0, "FontSize", 205);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 272041022);
+ // Graphical Object:
+ set(goId0, "Right", 5259);
+ set(goId0, "Bottom", 2921);
+ set(goId0, "Left", 1686);
+	set(goId0, "Top", 2716);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "S22 versus Frequency, and RF Power");
+	set(goId0, "FontSize", 205);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1885571093);
+ // Graphical Object:
+ set(goId0, "Right", 11924);
+ set(goId0, "Bottom", -1206);
+ set(goId0, "Left", 8351);
+	set(goId0, "Top", -1411);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+// Base Class Object:
+ 			set(pageId, "Name", "S-Pars, Stability vs Freq & Power");
+ 			set(pageId, "Uid", 1176740458);
+ 	set(pageId, "Invisible", FALSE);
+
+set(ddWinId, "CurrentPage", 1176740458);
+	set(ddWinId, "PageViewRect_1176740458", list(-4908, 6779, 13803, -5170));
+set(ddoId, "EraseAll", 0);
+set(ddoId, "DrawAll", 0);
+pageId = get_new(ddoId, "Page");
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Transducer \nPower Gain");
+	set(goId0, "FontSize", 208);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 405279450);
+ // Graphical Object:
+ set(goId0, "Right", 5659);
+ set(goId0, "Bottom", -625);
+ set(goId0, "Left", 4507);
+	set(goId0, "Top", -1041);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 6609006);
+ // Graphical Object:
+ set(goId0, "Right", 509);
+ set(goId0, "Bottom", -139);
+ set(goId0, "Left", -638);
+	set(goId0, "Top", -582);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 0);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 182);
+	set(goId0, "Format", ddsFormatEngineering);
+	set(goId0, "NumDigits", 3);
+	set(goId0, "LabelOnOff", FALSE);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "TitleFontSize", 140);
+decl traceID;
+traceID = get_new(goId0, "Trace", "_10GHz_1Stage_HigherLevel6..RFpower[0,0]", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "_10GHz_1Stage_HigherLevel6..RFpower[0,0]");
+	if (traceID != NULL) set(traceID, "Uid", 1729658272);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Fundamental\n Frequency");
+	set(goId0, "FontSize", 208);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 624694207);
+ // Graphical Object:
+ set(goId0, "Right", 2366);
+ set(goId0, "Bottom", -674);
+ set(goId0, "Left", 1175);
+	set(goId0, "Top", -1090);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 538745330);
+ // Graphical Object:
+ set(goId0, "Right", 12048);
+ set(goId0, "Bottom", 2792);
+ set(goId0, "Left", 860);
+	set(goId0, "Top", -602);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 0);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 182);
+	set(goId0, "Format", ddsFormatEngineering);
+	set(goId0, "NumDigits", 2);
+	set(goId0, "LabelOnOff", FALSE);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "TitleFontSize", 140);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1065742450);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 140);
+	if (axisID != NULL) set(axisID, "LineThick", 7);
+	if (axisID != NULL) set(axisID, "TickFontSize", 112);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0);
+decl traceID;
+traceID = get_new(goId0, "Trace", "dBm(_10GHz_1Stage_HigherLevel6..Vload[1],_10GHz_1Stage_HigherLevel6..Zload[0,0])", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "dBm(_10GHz_1Stage_HigherLevel6..Vload[1],_10GHz_1Stage_HigherLevel6..Zload[0,0])");
+	if (traceID != NULL) set(traceID, "Uid", 2026565383);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+decl traceID;
+traceID = get_new(goId0, "Trace", "HB1TonePAE_Fswp_P_gain_transducer", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "HB1TonePAE_Fswp_P_gain_transducer");
+	if (traceID != NULL) set(traceID, "Color", 5);
+	if (traceID != NULL) set(traceID, "Uid", 1289698019);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+decl traceID;
+traceID = get_new(goId0, "Trace", "HB1TonePAE_Fswp_PAE", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "HB1TonePAE_Fswp_PAE");
+	if (traceID != NULL) set(traceID, "Color", 6);
+	if (traceID != NULL) set(traceID, "Uid", 1689489277);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+decl traceID;
+traceID = get_new(goId0, "Trace", "HB1TonePAE_Fswp_Pdc", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "HB1TonePAE_Fswp_Pdc");
+	if (traceID != NULL) set(traceID, "Color", 3);
+	if (traceID != NULL) set(traceID, "Uid", 591601056);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+decl traceID;
+traceID = get_new(goId0, "Trace", "real(_10GHz_1Stage_HigherLevel6..Is_high.i[0])", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "real(_10GHz_1Stage_HigherLevel6..Is_high.i[0])");
+	if (traceID != NULL) set(traceID, "Color", 4);
+	if (traceID != NULL) set(traceID, "Uid", 1499008546);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+decl traceID;
+traceID = get_new(goId0, "Trace", "HB1TonePAE_Fswp_Pdiss", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "HB1TonePAE_Fswp_Pdiss");
+	if (traceID != NULL) set(traceID, "Color", 17);
+	if (traceID != NULL) set(traceID, "Uid", 1820871069);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Fundamental\nOutput Power\n    dBm");
+	set(goId0, "FontSize", 208);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 578185012);
+ // Graphical Object:
+ set(goId0, "Right", 4054);
+ set(goId0, "Bottom", -618);
+ set(goId0, "Left", 2746);
+	set(goId0, "Top", -1242);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Listing");
+// Base Class Object:
+ 			set(goId0, "Uid", 524622784);
+ // Graphical Object:
+ set(goId0, "Right", 8250);
+ set(goId0, "Bottom", 7511);
+ set(goId0, "Left", 876);
+	set(goId0, "Top", 3628);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 13);
+	set(goId0, "RightMargin", 13);
+	set(goId0, "TopMargin", 0);
+	set(goId0, "BottomMargin", 13);
+// Listing column:
+	set(goId0, "ListingFontSize", 182);
+	set(goId0, "Format", ddsFormatEngineering);
+	set(goId0, "NumDigits", 2);
+	set(goId0, "LabelOnOff", FALSE);
+	set(goId0, "OutlineThickness", 14);
+	set(goId0, "SuppressTable", TRUE);
+	set(goId0, "TitleFontSize", 140);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 292263317);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 140);
+	if (axisID != NULL) set(axisID, "LineThick", 7);
+	if (axisID != NULL) set(axisID, "TickFontSize", 112);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0);
+decl traceID;
+traceID = get_new(goId0, "Trace", "dB(_10GHz_1Stage_HigherLevel6..Vload[2]/_10GHz_1Stage_HigherLevel6..Vload[1])", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "dB(_10GHz_1Stage_HigherLevel6..Vload[2]/_10GHz_1Stage_HigherLevel6..Vload[1])");
+	if (traceID != NULL) set(traceID, "Uid", 1454564271);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+decl traceID;
+traceID = get_new(goId0, "Trace", "dB(_10GHz_1Stage_HigherLevel6..Vload[3]/_10GHz_1Stage_HigherLevel6..Vload[1])", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "dB(_10GHz_1Stage_HigherLevel6..Vload[3]/_10GHz_1Stage_HigherLevel6..Vload[1])");
+	if (traceID != NULL) set(traceID, "Color", 5);
+	if (traceID != NULL) set(traceID, "Uid", 1595547006);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+decl traceID;
+traceID = get_new(goId0, "Trace", "dB(_10GHz_1Stage_HigherLevel6..Vload[4]/_10GHz_1Stage_HigherLevel6..Vload[1])", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "dB(_10GHz_1Stage_HigherLevel6..Vload[4]/_10GHz_1Stage_HigherLevel6..Vload[1])");
+	if (traceID != NULL) set(traceID, "Color", 6);
+	if (traceID != NULL) set(traceID, "Uid", 2000917549);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+decl traceID;
+traceID = get_new(goId0, "Trace", "dB(_10GHz_1Stage_HigherLevel6..Vload[5]/_10GHz_1Stage_HigherLevel6..Vload[1])", "", "");
+// Text trace:
+	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "dB(_10GHz_1Stage_HigherLevel6..Vload[5]/_10GHz_1Stage_HigherLevel6..Vload[1])");
+	if (traceID != NULL) set(traceID, "Color", 3);
+	if (traceID != NULL) set(traceID, "Uid", 1294351396);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", " Second\nHarmonic\n  dBc");
+	set(goId0, "FontSize", 208);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1174102978);
+ // Graphical Object:
+ set(goId0, "Right", 3741);
+ set(goId0, "Bottom", 3556);
+ set(goId0, "Left", 2862);
+	set(goId0, "Top", 2932);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", " Available \nSource Power\n   dBm");
+	set(goId0, "FontSize", 208);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 600496128);
+ // Graphical Object:
+ set(goId0, "Right", 856);
+ set(goId0, "Bottom", -601);
+ set(goId0, "Left", -511);
+	set(goId0, "Top", -1225);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", " Third\nHarmonic\n  dBc");
+	set(goId0, "FontSize", 208);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1052988670);
+ // Graphical Object:
+ set(goId0, "Right", 5257);
+ set(goId0, "Bottom", 3576);
+ set(goId0, "Left", 4378);
+	set(goId0, "Top", 2952);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", " Fourth\nHarmonic\n  dBc");
+	set(goId0, "FontSize", 208);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1229763184);
+ // Graphical Object:
+ set(goId0, "Right", 6719);
+ set(goId0, "Bottom", 3585);
+ set(goId0, "Left", 5840);
+	set(goId0, "Top", 2961);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", " Fifth\nHarmonic\n  dBc");
+	set(goId0, "FontSize", 208);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1013637607);
+ // Graphical Object:
+ set(goId0, "Right", 8106);
+ set(goId0, "Bottom", 3563);
+ set(goId0, "Left", 7227);
+	set(goId0, "Top", 2939);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Plot");
+// Base Class Object:
+ 			set(goId0, "Uid", 448241385);
+ // Graphical Object:
+ set(goId0, "Right", 2600);
+ set(goId0, "Bottom", -1518);
+ set(goId0, "Left", -1421);
+	set(goId0, "Top", -4465);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 771);
+	set(goId0, "RightMargin", 100);
+	set(goId0, "TopMargin", 307);
+	set(goId0, "BottomMargin", 922);
+	set(goId0, "Title", "Transducer Power Gain, dB");
+	set(goId0, "TitleFontSize", 182);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "xAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 189476586);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", 700000000);
+	if (axisID != NULL) set(axisID, "MaxValue", 860000000);
+	if (axisID != NULL) set(axisID, "StepSize", 20000000);
+	if (axisID != NULL) set(axisID, "Format", ddsFormatEngineering);
+	if (axisID != NULL) set(axisID, "NumDigits", 2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "yAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 726951076);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "UserLabel", "    ");
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", 12);
+	if (axisID != NULL) set(axisID, "MaxValue", 15);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 14432158);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 20);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1605574515);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 20);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl traceID;
+traceID = get_new(goId0, "Trace", "HB1TonePAE_Fswp_P_gain_transducer", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "HB1TonePAE_Fswp_P_gain_transducer");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 1289160421);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "SymbolsOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Plot");
+// Base Class Object:
+ 			set(goId0, "Uid", 98594006);
+ // Graphical Object:
+ set(goId0, "Right", -984);
+ set(goId0, "Bottom", 5390);
+ set(goId0, "Left", -5818);
+	set(goId0, "Top", 2134);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 856);
+	set(goId0, "RightMargin", 100);
+	set(goId0, "TopMargin", 307);
+	set(goId0, "BottomMargin", 922);
+	set(goId0, "Title", "Fundamental and Third Harm., dBm");
+	set(goId0, "TitleFontSize", 182);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "xAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 846839733);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", 700000000);
+	if (axisID != NULL) set(axisID, "MaxValue", 860000000);
+	if (axisID != NULL) set(axisID, "StepSize", 20000000);
+	if (axisID != NULL) set(axisID, "Format", ddsFormatEngineering);
+	if (axisID != NULL) set(axisID, "NumDigits", 2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "yAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 101040141);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", -60);
+	if (axisID != NULL) set(axisID, "MaxValue", 20);
+	if (axisID != NULL) set(axisID, "StepSize", 10);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 853339745);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 20);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1618780132);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 20);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl traceID;
+traceID = get_new(goId0, "Trace", "HB1TonePAE_Fswp_Spectrum[1]", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "HB1TonePAE_Fswp_Spectrum[1]");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 1283910483);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+decl traceID;
+traceID = get_new(goId0, "Trace", "HB1TonePAE_Fswp_Spectrum[3]", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "HB1TonePAE_Fswp_Spectrum[3]");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 5);
+	if (traceID != NULL) set(traceID, "Uid", 875894288);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Fundamental\n Frequency");
+	set(goId0, "FontSize", 208);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1086150789);
+ // Graphical Object:
+ set(goId0, "Right", 2299);
+ set(goId0, "Bottom", 3520);
+ set(goId0, "Left", 1108);
+	set(goId0, "Top", 3104);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Plot");
+// Base Class Object:
+ 			set(goId0, "Uid", 70400336);
+ // Graphical Object:
+ set(goId0, "Right", 7490);
+ set(goId0, "Bottom", -1768);
+ set(goId0, "Left", 3138);
+	set(goId0, "Top", -4318);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 500);
+	set(goId0, "RightMargin", 100);
+	set(goId0, "TopMargin", 125);
+	set(goId0, "BottomMargin", 500);
+	set(goId0, "Title", "PAE, %");
+	set(goId0, "TitleFontSize", 182);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "xAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 475607703);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", 700000000);
+	if (axisID != NULL) set(axisID, "MaxValue", 860000000);
+	if (axisID != NULL) set(axisID, "StepSize", 20000000);
+	if (axisID != NULL) set(axisID, "Format", ddsFormatEngineering);
+	if (axisID != NULL) set(axisID, "NumDigits", 2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "yAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 793724588);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "UserLabel", "    ");
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", 2);
+	if (axisID != NULL) set(axisID, "MaxValue", 5);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 664545966);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 20);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1817467899);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 20);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl traceID;
+traceID = get_new(goId0, "Trace", "HB1TonePAE_Fswp_PAE", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "HB1TonePAE_Fswp_PAE");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 742006486);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "SymbolsOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Plot");
+// Base Class Object:
+ 			set(goId0, "Uid", 45947353);
+ // Graphical Object:
+ set(goId0, "Right", 12143);
+ set(goId0, "Bottom", -1314);
+ set(goId0, "Left", 7477);
+	set(goId0, "Top", -4479);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 869);
+	set(goId0, "RightMargin", 100);
+	set(goId0, "TopMargin", 307);
+	set(goId0, "BottomMargin", 922);
+	set(goId0, "Title", "High Supply Current");
+	set(goId0, "TitleFontSize", 182);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "xAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1570222502);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", 700000000);
+	if (axisID != NULL) set(axisID, "MaxValue", 860000000);
+	if (axisID != NULL) set(axisID, "StepSize", 20000000);
+	if (axisID != NULL) set(axisID, "Format", ddsFormatEngineering);
+	if (axisID != NULL) set(axisID, "NumDigits", 2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "yAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1511911514);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "UserLabel", "    ");
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", 0.103);
+	if (axisID != NULL) set(axisID, "MaxValue", 0.108);
+	if (axisID != NULL) set(axisID, "StepSize", 0.001);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 95153697);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 20);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1179015545);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 20);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl traceID;
+traceID = get_new(goId0, "Trace", "real(_10GHz_1Stage_HigherLevel6..Is_high.i[0])", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "real(_10GHz_1Stage_HigherLevel6..Is_high.i[0])");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 1297757868);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "SymbolsOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Power-Added\n Efficiency");
+	set(goId0, "FontSize", 208);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 575483144);
+ // Graphical Object:
+ set(goId0, "Right", 7342);
+ set(goId0, "Bottom", -629);
+ set(goId0, "Left", 6014);
+	set(goId0, "Top", -1045);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", " Thermal\nDissipation\n Watts");
+	set(goId0, "FontSize", 208);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 516729635);
+ // Graphical Object:
+ set(goId0, "Right", 11852);
+ set(goId0, "Bottom", -601);
+ set(goId0, "Left", 10837);
+	set(goId0, "Top", -1225);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "High Supply \n   Current");
+	set(goId0, "FontSize", 208);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 39223377);
+ // Graphical Object:
+ set(goId0, "Right", 10388);
+ set(goId0, "Bottom", -685);
+ set(goId0, "Left", 9217);
+	set(goId0, "Top", -1101);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "DC Power\nConsumpt.\n Watts");
+	set(goId0, "FontSize", 208);
+	set(goId0, "OutlineOnOff", FALSE);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1741800363);
+ // Graphical Object:
+ set(goId0, "Right", 8724);
+ set(goId0, "Bottom", -599);
+ set(goId0, "Left", 7728);
+	set(goId0, "Top", -1223);
+ set(goId0, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "HB1TonePAE_Fswp_Spectrum=10*log(HB1TonePAE_Fswp_Pout_W) +30");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1880794139);
+ // Graphical Object:
+ set(goId0, "Right", 8957);
+ set(goId0, "Bottom", 3351);
+ set(goId0, "Left", 8957);
+	set(goId0, "Top", 3351);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "HB1TonePAE_Fswp_P_gain_transducer=HB1TonePAE_Fswp_Spectrum[1]-_10GHz_1Stage_HigherLevel6..RFpower[0,0]");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1285161717);
+ // Graphical Object:
+ set(goId0, "Right", 8962);
+ set(goId0, "Bottom", 3340);
+ set(goId0, "Left", 8962);
+	set(goId0, "Top", 3340);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "HB1TonePAE_Fswp_TOIoutput=1.5*HB1TonePAE_Fswp_Spectrum[1]-0.5*HB1TonePAE_Fswp_Spectrum[3]");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1106178479);
+ // Graphical Object:
+ set(goId0, "Right", 8925);
+ set(goId0, "Bottom", 3343);
+ set(goId0, "Left", 8925);
+	set(goId0, "Top", 3343);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "HB1TonePAE_Fswp_TOIinput=HB1TonePAE_Fswp_TOIoutput-HB1TonePAE_Fswp_P_gain_transducer");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 2070998516);
+ // Graphical Object:
+ set(goId0, "Right", 8934);
+ set(goId0, "Bottom", 3361);
+ set(goId0, "Left", 8934);
+	set(goId0, "Top", 3361);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "HB1TonePAE_Fswp_Pout_W=0.5*real(_10GHz_1Stage_HigherLevel6..Vload*conj(_10GHz_1Stage_HigherLevel6..Iload.i))+1e-20");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 170077725);
+ // Graphical Object:
+ set(goId0, "Right", 8985);
+ set(goId0, "Bottom", 3388);
+ set(goId0, "Left", 8985);
+	set(goId0, "Top", 3388);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+        set(goId0, "Expression", "HB1TonePAE_Fswp_Pin_W=0.5*real(_10GHz_1Stage_HigherLevel6..Vinput*conj(_10GHz_1Stage_HigherLevel6..I_input.i))+1e-20");
+        set(goId0, "FontSize", 0);
+// Base Class Object:
+                        set(goId0, "Name", "");
+                        set(goId0, "Uid", 170077625);
+ // Graphical Object:
+ set(goId0, "Right", 8985);
+ set(goId0, "Bottom", 3388);
+ set(goId0, "Left", 8985);
+        set(goId0, "Top", 3388);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "HB1TonePAE_Fswp_PAE=100*((HB1TonePAE_Fswp_Pout_fund_W-HB1TonePAE_Fswp_Pin_W[1])/HB1TonePAE_Fswp_Pdc)");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 174996425);
+ // Graphical Object:
+ set(goId0, "Right", 8956);
+ set(goId0, "Bottom", 3333);
+ set(goId0, "Left", 8956);
+	set(goId0, "Top", 3333);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "HB1TonePAE_Fswp_Pavs_W=10**((_10GHz_1Stage_HigherLevel6..RFpower[0,0]-30)/10)");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1169108990);
+ // Graphical Object:
+ set(goId0, "Right", 8943);
+ set(goId0, "Bottom", 3330);
+ set(goId0, "Left", 8943);
+	set(goId0, "Top", 3330);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "HB1TonePAE_Fswp_Pdiss=HB1TonePAE_Fswp_Pinput_total-HB1TonePAE_Fswp_Poutput_total");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1840246707);
+ // Graphical Object:
+ set(goId0, "Right", 8855);
+ set(goId0, "Bottom", 3330);
+ set(goId0, "Left", 8855);
+	set(goId0, "Top", 3330);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "HB1TonePAE_Fswp_Poutput_total=sum(HB1TonePAE_Fswp_Pout_W)");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 457824093);
+ // Graphical Object:
+ set(goId0, "Right", 8908);
+ set(goId0, "Bottom", 3335);
+ set(goId0, "Left", 8908);
+	set(goId0, "Top", 3335);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "HB1TonePAE_Fswp_Pinput_total=sum(HB1TonePAE_Fswp_Pin_W)+HB1TonePAE_Fswp_Pdc");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 738815648);
+ // Graphical Object:
+ set(goId0, "Right", 8838);
+ set(goId0, "Bottom", 3335);
+ set(goId0, "Left", 8838);
+	set(goId0, "Top", 3335);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "HB1TonePAE_Fswp_Pout_fund_W=HB1TonePAE_Fswp_Pout_W[1]");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1608439173);
+ // Graphical Object:
+ set(goId0, "Right", 8942);
+ set(goId0, "Bottom", 3338);
+ set(goId0, "Left", 8942);
+	set(goId0, "Top", 3338);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "HB1TonePAE_Fswp_Is_h=exists(\"real(_10GHz_1Stage_HigherLevel6..Is_high.i[0])\")");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 85030145);
+ // Graphical Object:
+ set(goId0, "Right", 8942);
+ set(goId0, "Bottom", 3366);
+ set(goId0, "Left", 8942);
+	set(goId0, "Top", 3366);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "HB1TonePAE_Fswp_Is_l=exists(\"real(_10GHz_1Stage_HigherLevel6..Is_low.i[0])\")");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1910036532);
+ // Graphical Object:
+ set(goId0, "Right", 8966);
+ set(goId0, "Bottom", 3343);
+ set(goId0, "Left", 8966);
+	set(goId0, "Top", 3343);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "HB1TonePAE_Fswp_Vs_l=exists(\"real(_10GHz_1Stage_HigherLevel6..Vs_low[0])\")");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 211704089);
+ // Graphical Object:
+ set(goId0, "Right", 8939);
+ set(goId0, "Bottom", 3361);
+ set(goId0, "Left", 8939);
+	set(goId0, "Top", 3361);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "HB1TonePAE_Fswp_Vs_h=exists(\"real(_10GHz_1Stage_HigherLevel6..Vs_high[0])\")");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 280016883);
+ // Graphical Object:
+ set(goId0, "Right", 8931);
+ set(goId0, "Bottom", 3338);
+ set(goId0, "Left", 8931);
+	set(goId0, "Top", 3338);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Equation");
+// Expression...
+	set(goId0, "Expression", "HB1TonePAE_Fswp_Pdc=HB1TonePAE_Fswp_Is_h*HB1TonePAE_Fswp_Vs_h +HB1TonePAE_Fswp_Is_l*HB1TonePAE_Fswp_Vs_l +1e-20");
+	set(goId0, "FontSize", 0);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1662071285);
+ // Graphical Object:
+ set(goId0, "Right", 8885);
+ set(goId0, "Bottom", 3352);
+ set(goId0, "Left", 8885);
+	set(goId0, "Top", 3352);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Plot");
+// Base Class Object:
+ 			set(goId0, "Uid", 605308170);
+ // Graphical Object:
+ set(goId0, "Right", -1506);
+ set(goId0, "Bottom", -1174);
+ set(goId0, "Left", -5698);
+	set(goId0, "Top", -4499);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 771);
+	set(goId0, "RightMargin", 100);
+	set(goId0, "TopMargin", 307);
+	set(goId0, "BottomMargin", 942);
+	set(goId0, "Title", "Output Spectrum, dBm");
+	set(goId0, "TitleFontSize", 182);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "xAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 2119112296);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "UserLabel", "freq");
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", 0);
+	if (axisID != NULL) set(axisID, "MaxValue", 4000000000);
+	if (axisID != NULL) set(axisID, "StepSize", 500000000);
+	if (axisID != NULL) set(axisID, "Format", ddsFormatEngineering);
+	if (axisID != NULL) set(axisID, "NumDigits", 2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "yAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 708759972);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "UserLabel", " ");
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "AutoscaleOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "MinValue", -150);
+	if (axisID != NULL) set(axisID, "MaxValue", 50);
+	if (axisID != NULL) set(axisID, "StepSize", 50);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1683055361);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 140);
+	if (axisID != NULL) set(axisID, "LineThick", 7);
+	if (axisID != NULL) set(axisID, "TickFontSize", 112);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.5);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 796838267);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 140);
+	if (axisID != NULL) set(axisID, "LineThick", 7);
+	if (axisID != NULL) set(axisID, "TickFontSize", 112);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl traceID;
+traceID = get_new(goId0, "Trace", "vs(HB1TonePAE_Fswp_Spectrum[ssm8,::],_10GHz_1Stage_HigherLevel6..freq[ssm8,::])", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "vs(HB1TonePAE_Fswp_Spectrum[ssm8,::],_10GHz_1Stage_HigherLevel6..freq[ssm8,::])");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "TraceType", ddsSpectralTraceType);
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 771981719);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 14);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "FillHistogramsOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+decl goId0;
+goId0 = get_new(pageId, "Text");
+// Text:
+	set(goId0, "String", "Move Marker ssm8 to update \noutput spectrum plot.");
+	set(goId0, "FontSize", 208);
+	set(goId0, "TextColor", 1);
+// Base Class Object:
+ 			set(goId0, "Name", "");
+ 			set(goId0, "Uid", 1775346885);
+ // Graphical Object:
+ set(goId0, "Right", -1929);
+ set(goId0, "Bottom", 1452);
+ set(goId0, "Left", -4701);
+	set(goId0, "Top", 1036);
+ set(goId0, "LineColor", 1);
+ set(goId0, "LineWidth", 42);
+ // Need to add Popup, LocalPopup, Owner...
+decl goId0;
+goId0 = get_new(pageId, "Plot");
+// Base Class Object:
+ 			set(goId0, "Uid", 725250173);
+ // Graphical Object:
+ set(goId0, "Right", -890);
+ set(goId0, "Bottom", 567);
+ set(goId0, "Left", -5624);
+	set(goId0, "Top", -1042);
+ set(goId0, "LineWidth", 7);
+ // Need to add Popup, LocalPopup, Owner...
+// Box...
+// Plot base...
+	set(goId0, "LeftMargin", 500);
+	set(goId0, "RightMargin", 100);
+	set(goId0, "TopMargin", 307);
+	set(goId0, "BottomMargin", 922);
+	set(goId0, "Title", "RF Frequency Selector");
+	set(goId0, "TitleFontSize", 182);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "xAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1319373094);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "UserLabel", "RFfreq");
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", 700000000);
+	if (axisID != NULL) set(axisID, "MaxValue", 860000000);
+	if (axisID != NULL) set(axisID, "StepSize", 20000000);
+	if (axisID != NULL) set(axisID, "Format", ddsFormatEngineering);
+	if (axisID != NULL) set(axisID, "NumDigits", 2);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsYaxis, "yAxis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 799829761);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "FontSize", 1);
+	if (axisID != NULL) set(axisID, "LineThick", 14);
+	if (axisID != NULL) set(axisID, "TickFontSize", 1);
+	if (axisID != NULL) set(axisID, "AutoscaleOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "MinValue", 0);
+	if (axisID != NULL) set(axisID, "MaxValue", 2000000);
+	if (axisID != NULL) set(axisID, "StepSize", 2000000);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 1975605139);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 20);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 1);
+decl axisID;
+axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
+// Axis...
+	if (axisID != NULL) set(axisID, "Uid", 455103672);
+	if (axisID != NULL) set(axisID, "Color", 104);
+	if (axisID != NULL) set(axisID, "GridOnOff", FALSE);
+	if (axisID != NULL) set(axisID, "FontSize", 182);
+	if (axisID != NULL) set(axisID, "LineThick", 20);
+	if (axisID != NULL) set(axisID, "TickFontSize", 182);
+	if (axisID != NULL) set(axisID, "MinValue", -1);
+	if (axisID != NULL) set(axisID, "MaxValue", 1);
+	if (axisID != NULL) set(axisID, "StepSize", 0.2);
+decl traceID;
+traceID = get_new(goId0, "Trace", "vs([0::sweep_size(_10GHz_1Stage_HigherLevel6..RFfreq)-1],_10GHz_1Stage_HigherLevel6..RFfreq)", "xAxis", "yAxis");
+// Trace:
+	if (traceID != NULL) set(traceID, "Expression", "vs([0::sweep_size(_10GHz_1Stage_HigherLevel6..RFfreq)-1],_10GHz_1Stage_HigherLevel6..RFfreq)");
+	if (traceID != NULL) set(traceID, "XaxisName", "xAxis");
+	if (traceID != NULL) set(traceID, "YaxisName", "yAxis");
+	if (traceID != NULL) set(traceID, "Color", 1);
+	if (traceID != NULL) set(traceID, "Uid", 978601767);
+	if (traceID != NULL) set(traceID, "UIIndex", 0);
+// Rect trace:
+	if (traceID != NULL) set(traceID, "LineThick", 42);
+	if (traceID != NULL) set(traceID, "SymbolType", ddsCircleSymbol);
+	if (traceID != NULL) set(traceID, "LabelSubtracesOnOff", TRUE);
+	if (traceID != NULL) set(traceID, "NumDigits", 3);
+	if (traceID != NULL) set(traceID, "FontSize", 112);
+decl markerID;
+markerID = get_new(traceID, "MarkerNew", "ssm8", "780000000.00000000000000000000000000000000", 0, "");
+// Base Class Object:
+ 			set(markerID, "Name", "default");
+ 			set(markerID, "Uid", 2062641324);
+ // Graphical Object:
+ set(markerID, "Right", 3863);
+ set(markerID, "Bottom", 4782);
+ set(markerID, "Left", 3738);
+	set(markerID, "Top", 4457);
+ set(markerID, "Zrot", 0.000000);
+ set(markerID, "Yrot", 0.000000);
+ set(markerID, "Xrot", 0.000000);
+ set(markerID, "Status", 0);
+ set(markerID, "LineWidth", 0);
+ // Need to add Popup, LocalPopup, Owner...
+// Marker:
+                    	if (markerID != NULL) set(markerID, "DataScript", "trcdata");
+						if (markerID != NULL) set(markerID, "DeltaModeStatus", 0);
+						if (markerID != NULL) set(markerID, "Format", 0);
+                    	if (markerID != NULL) set(markerID, "NumDigits", 3);
+                    	if (markerID != NULL) set(markerID, "ComplexNumberFormat", 1);
+                    	if (markerID != NULL) set(markerID, "AuxFormat", 0);
+						if (markerID != NULL) set(markerID, "AuxNumDigits", 3);
+						if (markerID != NULL) set(markerID, "AuxType", 0);
+                    	if (markerID != NULL) set(markerID, "AuxZ", "1");
+                    	if (markerID != NULL) set(markerID, "AuxComplexNumberFormat", 0);
+// More marker:
+              	if (markerID != NULL) set(markerID, "MkrLabelFontSize", 166);
+              	if (markerID != NULL) set(markerID, "MkrLabelColor", 0);
+              	if (markerID != NULL) set(markerID, "MkrReadoutFontSize", 0);
+              	if (markerID != NULL) set(markerID, "MkrReadoutColor", 0);
+              	if (markerID != NULL) set(markerID, "MkrReadoutLeft", -1021);
+			  	if (markerID != NULL) set(markerID, "MkrReadoutRight", -945);
+			  	if (markerID != NULL) set(markerID, "MkrReadoutBottom", -290);
+			  	if (markerID != NULL) set(markerID, "MkrReadoutTop", -366);
+              	if (markerID != NULL) set(markerID, "MkrIndicatorColor", 0);
+// Initialize plot
+set(goId0, "InitPlot", 0);
+// Base Class Object:
+ 			set(pageId, "Name", "1-Tone Spectrum, HD, PAE vs Freq");
+ 			set(pageId, "Uid", 1655118294);
+ 	set(pageId, "Invisible", FALSE);
+
+set(ddWinId, "CurrentPage", 1655118294);
+	set(ddWinId, "PageViewRect_1655118294", list(-6359, 7587, 12676, -4576));
+set(ddoId, "EraseAll", 0);
+set(ddoId, "DrawAll", 0);
+set(ddWinId, "CurrentPage", 1091447735);
+set(ddoId, "UpdateAllExpressions", TRUE);
+set(ddoId, "EnableExpressionUpdates", TRUE);
+
+	set(ddWinId, "ForegroundColor", 0);
+	set(ddWinId, "BackgroundColor", 8);
+
+set(ddoId, "EraseAll", 0);
+set(ddoId, "DrawAll", 0);
+}
+
+_DDSobjectSaveRestore_() ;

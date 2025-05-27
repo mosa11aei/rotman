@@ -26,7 +26,7 @@ scaleX 1.000000
 scaleY 1.000000
 toArcRadius 0.300000
 miterVertexLength 1.000000
-portOrientation 0.000000
+portOrientation 10000.000000
 plottingDepth 10
 bboxColor 0
 selectColor 0
@@ -39,7 +39,6 @@ portColor 5
 backgroundColor 42
 foregroundColor 10
 globalArcResolution 5.000000
-pcbViaArcResolution 5.000000
 selectFilter 1535
 selectMode 1
 shapeSelectMode 2

@@ -1,12 +1,12 @@
 
-hpeesofsim (*) 610.shp Aug 20 2024, MINT version 5
-    (64-bit windows built: Tue Aug 20, 2024 21:40:41 +0000)
+hpeesofsim (*) 601.update2.1 May  7 2024, MINT version 5
+    (64-bit linux built: Tue May 07, 2024 20:26:56 +0000)
 
 
-***** Simulation started at Fri May 23 19:20:35 2025
-      Running on host: "bzzt"
-      In Directory: "C:\Users\Ali Mosallaei\Desktop\Desktop\Radlab\rotman\ads\Amplifier_wrk\data"
-      Process ID: 41512
+***** Simulation started at Tue, May 27 2025 09:47:40 -0400
+      Running on host: "afshari.eecs.umich.edu"
+      In Directory: "/research/alimos/rotman/ads/Amplifier_wrk/data"
+      User: "alimos", Process ID: 47270
 
 Warning detected by hpeesofsim in LinearCollapse '_2_' during analysis.
     LinearCollapse is disabled because there is 'Tran' analysis present.
@@ -26,5 +26,12 @@ Warning detected by hpeesofsim during TRAN analysis `Tran1'.
 
 
 Resource usage:
-  Total stopwatch time     =     2.75 seconds.
+    User time                 =     0.52 seconds.
+    System time               =     0.19 seconds.
+    Total CPU time            =     0.71 seconds.
+    Simulation stopwatch time =     0.25 seconds.
+    Total stopwatch time      =     4.40 seconds.
+
+    Physical memory used: 108 MBytes.
+    Incremental virtual memory (data only) used:  45.2 MBytes.
 

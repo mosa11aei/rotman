@@ -1,0 +1,10 @@
+(nil
+    spare_node_list(1)
+       (
+            "X1.V_Probe1.net"
+        )
+    spare_inst_list(1)
+       (
+            "X1.V_Probe1.Short1"
+        )
+)

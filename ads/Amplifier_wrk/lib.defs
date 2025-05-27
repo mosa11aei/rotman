@@ -2,3 +2,4 @@ INCLUDE $HPEESOF_DIR/oalibs/analog_rf.defs
 DEFINE Amplifier_lib Amplifier_lib
 ASSIGN Amplifier_lib libMode shared
 INCLUDE $HOME/Desktop/Desktop/Radlab/rotman/ads/Amplifier_wrk/nxp_rf_smallSignal/lib.defs
+INCLUDE nxp_rf_smallSignal/lib.defs
