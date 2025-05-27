@@ -1,0 +1,38 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFG424F_1V_3mA.s2p
+   1     BFG424F_1V_5mA.s2p
+   2     BFG424F_1V_10mA.s2p
+   3     BFG424F_1V_15mA.s2p
+   4     BFG424F_1V_20mA.s2p
+   5     BFG424F_1V_25mA.s2p
+   
+   6     BFG424F_2V_3mA.s2p
+   7     BFG424F_2V_5mA.s2p
+   8     BFG424F_2V_10mA.s2p
+   9     BFG424F_2V_15mA.s2p
+   10    BFG424F_2V_20mA.s2p
+   11    BFG424F_2V_25mA.s2p 
+   
+   12    BFG424F_3V_5mA.s2p
+   13    BFG424F_3V_10mA.s2p
+   14    BFG424F_3V_15mA.s2p
+   15    BFG424F_3V_20mA.s2p
+   16    BFG424F_3V_25mA.s2p
+   
+   17    BFG424F_4V_5mA.s2p
+   18    BFG424F_4V_10mA.s2p
+   19    BFG424F_4V_15mA.s2p
+   20    BFG424F_4V_20mA.s2p
+   21    BFG424F_4V_25mA.s2p
+   
+   22    BFG424F_5V_6mA.s2p   
+   23    BFG424F_5V_10mA.s2p
+   24    BFG424F_5V_15mA.s2p
+   25    BFG424F_5V_20mA.s2p
+   26    BFG424F_5V_25mA.s2p
+         
+   27    BFG424F_NF_2V_1mA.s2p
+
+END dscrdata

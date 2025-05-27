@@ -1,0 +1,6 @@
+# Library Defs for editing the nxp_rf_smallSignal design kit
+# Remove this from the design kit before distributing to customers.
+DEFINE nxp_rf_smallSignal_tech ./nxp_rf_smallSignal_tech
+ASSIGN nxp_rf_smallSignal_tech libMode shared
+DEFINE nxp_rf_smallSignal ./nxp_rf_smallSignal
+ASSIGN nxp_rf_smallSignal libMode shared

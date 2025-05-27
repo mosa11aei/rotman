@@ -1,0 +1,17 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFG520W_3V_2mA.s2p  
+   1     BFG520W_3V_5mA.s2p
+   2     BFG520W_3V_10mA.s2p
+   3     BFG520W_3V_15mA.s2p 
+   4     BFG520W_3V_20mA.s2p
+   5     BFG520W_3V_30mA.s2p   
+   6     BFG520W_6V_2mA.s2p
+   7     BFG520W_6V_5mA.s2p  
+   8     BFG520W_6V_10mA.s2p
+   9     BFG520W_6V_15mA.s2p 
+   10    BFG520W_6V_20mA.s2p
+   11    BFG520W_6V_30mA.s2p
+ 
+END dscrdata

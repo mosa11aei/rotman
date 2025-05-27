@@ -1,0 +1,5 @@
+# Library Defs for nxp_rf_smallSignal design kit
+DEFINE nxp_rf_smallSignal_tech ./nxp_rf_smallSignal_tech
+ASSIGN nxp_rf_smallSignal_tech libMode readOnly
+DEFINE nxp_rf_smallSignal ./nxp_rf_smallSignal
+ASSIGN nxp_rf_smallSignal libMode readOnly

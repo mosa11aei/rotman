@@ -1,0 +1,22 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BGA2001_1V_0_6mA.s2p
+   1     BGA2001_1_5V_1_9mA.s2p
+   2     BGA2001_2V_3_1mA.s2p
+   3     BGA2001_2_5V_4_4mA.s2p
+   4     BGA2001_3V_5_8mA.s2p
+   5     BGA2001_3_5V_7_2mA.s2p
+   6     BGA2001_4V_8_8mA.s2p
+   7     BGA2001_4_5V_11mA.s2p
+   8     BGA2001_S_NF_1V_0_5mA.s2p
+   9     BGA2001_S_NF_1_5V_1_7mA.s2p
+   10    BGA2001_S_NF_2V_2_8mA.s2p
+   11    BGA2001_S_NF_2_5V_4mA.s2p
+   12    BGA2001_S_NF_3V_5mA.s2p
+   13    BGA2001_S_NF_3_5V_6mA.s2p
+   14    BGA2001_S_NF_4V_7mA.s2p
+   15    BGA2001_S_NF_4_5V_8mA.s2p
+
+ 
+END dscrdata

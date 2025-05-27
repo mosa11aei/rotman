@@ -1,0 +1,10 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFG310XR_3V_1mA.s2p
+   1     BFG310XR_3V_2mA.s2p   
+   2     BFG310XR_3V_3mA.s2p
+   3     BFG310XR_3V_4mA.s2p
+   4     BFG310XR_3V_5mA.s2p
+
+END dscrdata

@@ -1,0 +1,87 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0    bfg425w_1V_1mA.s2p
+   1    bfg425w_1V_2mA.s2p
+   2    bfg425w_1V_3mA.s2p
+   3    bfg425w_1V_4mA.s2p
+   4    bfg425w_1V_5mA.s2p
+   5    bfg425w_1V_6mA.s2p
+   6    bfg425w_1V_7mA.s2p
+   7    bfg425w_1V_8mA.s2p
+   8    bfg425w_1V_9mA.s2p
+   9    bfg425w_1V_10mA.s2p
+   10   bfg425w_1V_15mA.s2p
+   11   bfg425w_1V_17_5mA.s2p
+   12   bfg425w_1V_20mA.s2p
+   13   bfg425w_1V_22_5mA.s2p
+   14   bfg425w_1V_25mA.s2p
+   15   bfg425w_1V_27_5mA.s2p
+   16   bfg425w_1V_30mA.s2p
+   17   bfg425w_1V_32_5mA.s2p
+   18   bfg425w_1V_35mA.s2p
+   
+   19   bfg425w_2V_1mA.s2p
+   20   bfg425w_2V_2mA.s2p
+   21   bfg425w_2V_3mA.s2p
+   22   bfg425w_2V_4mA.s2p
+   23   bfg425w_2V_5mA.s2p
+   24   bfg425w_2V_6mA.s2p
+   25   bfg425w_2V_7mA.s2p
+   26   bfg425w_2V_8mA.s2p
+   27   bfg425w_2V_9mA.s2p
+   28   bfg425w_2V_10mA.s2p
+   29   bfg425w_2V_12_5mA.s2p
+   30   bfg425w_2V_15mA.s2p
+   31   bfg425w_2V_17_5mA.s2p
+   32   bfg425w_2V_20mA.s2p
+   33   bfg425w_2V_22_5mA.s2p
+   34   bfg425w_2V_25mA.s2p
+   35   bfg425w_2V_27_5mA.s2p
+   36   bfg425w_2V_30mA.s2p
+   37   bfg425w_2V_32_5mA.s2p
+   38   bfg425w_2V_35mA.s2p
+   
+   39   bfg425w_3V_1mA.s2p
+   40   bfg425w_3V_2mA.s2p
+   41   bfg425w_3V_3mA.s2p
+   42   bfg425w_3V_4mA.s2p
+   43   bfg425w_3V_5mA.s2p
+   44   bfg425w_3V_6mA.s2p
+   45   bfg425w_3V_7mA.s2p
+   46   bfg425w_3V_8mA.s2p
+   47   bfg425w_3V_9mA.s2p
+   48   bfg425w_3V_10mA.s2p
+   49   bfg425w_3V_12_5mA.s2p
+   50   bfg425W_3V_15mA.s2p
+   51   bfg425W_3V_17_5mA.s2p
+   52   bfg425W_3V_20mA.s2p
+   53   bfg425W_3V_22_5mA.s2p
+   54   bfg425W_3V_25mA.s2p
+   55   bfg425W_3V_27_5mA.s2p
+   56   bfg425W_3V_30mA.s2p
+   57   bfg425W_3V_32_5mA.s2p
+   58   bfg425W_3V_35mA.s2p
+   
+   59   bfg425w_4V_1mA.s2p
+   60   bfg425w_4V_2mA.s2p
+   61   bfg425w_4V_3mA.s2p
+   62   bfg425w_4V_4mA.s2p
+   63   bfg425w_4V_5mA.s2p
+   64   bfg425w_4V_6mA.s2p
+   65   bfg425w_4V_7mA.s2p
+   66   bfg425w_4V_8mA.s2p
+   67   bfg425w_4V_9mA.s2p
+   68   bfg425W_4V_10mA.s2p  
+   69   bfg425W_4V_12_5mA.s2p   
+   70   bfg425w_4V_15mA.s2p
+   71   bfg425w_4V_17_5mA.s2p
+   72   bfg425W_4V_20mA.s2
+   73   bfg425w_4V_22_5mA.s2p
+   74   bfg425w_4V_25mA.s2p
+   75   bfg425w_4V_27_5mA.s2p
+   76   bfg425w_4V_30mA.s2p
+   77   bfg425w_4V_32_5mA.s2p
+   78   bfg425w_4V_35mA.s2p
+  
+END dscrdata

@@ -1,0 +1,30 @@
+
+hpeesofsim (*) 610.shp Aug 20 2024, MINT version 5
+    (64-bit windows built: Tue Aug 20, 2024 21:40:41 +0000)
+
+
+***** Simulation started at Fri May 23 19:20:35 2025
+      Running on host: "bzzt"
+      In Directory: "C:\Users\Ali Mosallaei\Desktop\Desktop\Radlab\rotman\ads\Amplifier_wrk\data"
+      Process ID: 41512
+
+Warning detected by hpeesofsim in LinearCollapse '_2_' during analysis.
+    LinearCollapse is disabled because there is 'Tran' analysis present.
+
+Pt DC convergence is used.
+
+SP SP1[1] <Amplifier_lib:10GHz_Amp:schematic>   freq=(5 GHz->15 GHz)
+
+
+.
+
+
+TRAN Tran1[1] <Amplifier_lib:10GHz_Amp:schematic>   time=(0 s->5 ns)
+Warning detected by hpeesofsim during TRAN analysis `Tran1'.
+    MaxTimeStep reduced to  6.250e-12 to resolve source bandwidth.
+
+
+
+Resource usage:
+  Total stopwatch time     =     2.75 seconds.
+

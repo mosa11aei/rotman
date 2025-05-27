@@ -1,0 +1,21 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFR93A_5V_5mA.s2p
+   1     BFR93A_5V_10mA.s2p
+   2     BFR93A_5V_20mA.s2p
+   3     BFR93A_5V_30mA.s2p
+   4     BFR93A_8V_5mA.s2p
+   5     BFR93A_8V_10mA.s2p
+   6     BFR93A_8V_20mA.s2p
+   7     BFR93A_8V_30mA.s2p
+   8     BFR93A_common_base_5V_5mA.s2p
+   9     BFR93A_common_base_5V_10mA.s2p
+   10    BFR93A_common_base_5V_20mA.s2p
+   11    BFR93A_common_base_5V_30mA.s2p
+   12    BFR93A_common_base_8V_5mA.s2p
+   13    BFR93A_common_base_8V_10mA.s2p
+   14    BFR93A_common_base_8V_20mA.s2p
+   15    BFR93A_common_base_8V_30mA.s2p
+
+END dscrdata

@@ -1,0 +1,12 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFG325XR_3V_3mA.s2p
+   1     BFG325XR_3V_5mA.s2p
+   2     BFG325XR_3V_7mA.s2p
+   3     BFG325XR_3V_9mA.s2p
+   4     BFG325XR_3V_11mA.s2p
+   5     BFG325XR_3V_13mA.s2p
+   6     BFG325XR_3V_15mA.s2p
+    
+END dscrdata

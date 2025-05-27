@@ -1,0 +1,21 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFT25A_1V_0_1mA.s2p
+   1     BFT25A_1V_0_25mA.s2p
+   2     BFT25A_1V_0_5mA.s2p
+   3     BFT25A_1V_1mA.s2p
+   4     BFT25A_1V_2mA.s2p
+   5     BFT25A_3V_0_1mA.s2p
+   6     BFT25A_3V_0_25mA.s2p
+   7     BFT25A_3V_0_5mA.s2p
+   8     BFT25A_3V_1mA.s2p
+   9     BFT25A_3V_2mA.s2p
+   
+   
+   
+   
+   
+
+
+END dscrdata

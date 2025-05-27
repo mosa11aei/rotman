@@ -1,0 +1,20 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFR106_10V_15mA.s2p
+   1     BFR106_10V_30mA.s2p
+   
+   2     BFR106_5V_15mA.s2p
+   3     BFR106_5V_30mA.s2p
+   4     BFR106_5V_50mA.s2p
+   5     BFR106_5V_70mA.s2p
+   
+   6     BFR106_common_base_10V_15mA.s2p
+   7     BFR106_common_base_10V_30mA.s2p
+   
+   8     BFR106_common_base_5V_15mA.s2p
+   9     BFR106_common_base_5V_30mA.s2p
+   10    BFR106_common_base_5V_50mA.s2p
+   11    BFR106_common_base_5V_70mA.s2p
+ 
+END dscrdata

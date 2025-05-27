@@ -1,0 +1,15 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFR92AW_5V_2mA.s2p
+   1     BFR92AW_5V_20mA.s2p
+   2     BFR92AW_10V_2mA.s2p
+   3     BFR92AW_10V_20mA.s2p
+   4     BFR92AW_S_NF_5V_5mA.s2p
+   5     BFR92AW_S_NF_5V_10mA.s2p
+   6     BFR92AW_S_NF_5V_15mA.s2p
+   7     BFR92AW_S_NF_10V_5mA.s2p
+   8     BFR92AW_S_NF_10V_10mA.s2p
+   9     BFR92AW_S_NF_10V_15mA.s2p
+
+END dscrdata

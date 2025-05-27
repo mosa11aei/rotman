@@ -1,0 +1,29 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     bfg21W_3_2V_50mA.s2p
+   1     bfg21W_3_2V_75mA.s2p   
+   2     bfg21W_3_2V_100mA.s2p
+   3     bfg21W_3_2V_125mA.s2p
+   4     bfg21W_3_2V_150mA.s2p
+   5     bfg21W_3_2V_175mA.s2p
+
+   6     bfg21W_3_6V_25mA.s2p
+   7     bfg21W_3_6V_50mA.s2p
+   8     bfg21W_3_6V_75mA.s2p      
+   9     bfg21W_3_6V_100mA.s2p
+   10    bfg21W_3_6V_125mA.s2p
+   11    bfg21W_3_6V_150mA.s2p
+   
+   12    bfg21W_4V_25mA.s2p
+   13    bfg21W_4V_50mA.s2p
+   14    bfg21W_4V_75mA.s2p
+   15    bfg21W_4V_100mA.s2p
+   16    bfg21W_4V_125mA.s2p
+   17    bfg21W_4V_150mA.s2p
+      
+   18    bfg21W_4_4V_25mA.s2p   
+   19    bfg21W_4_4V_50mA.s2p
+   20    bfg21W_4_4V_75mA.s2p
+
+END dscrdata

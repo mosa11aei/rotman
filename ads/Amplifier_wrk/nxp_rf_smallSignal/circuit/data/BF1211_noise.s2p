@@ -1,0 +1,7 @@
+!BF1211_noise  
+!Philips part #:BF1211
+! Bias condition: VDS=5V, VG2-S=4V,ID=15 mA    
+# MHz dB Ratio deg ohm
+! Freq. Fmin Gopt Gopt Rn
+400 0.9 0.693 16.75 29.85
+800 1.3 0.707 37.33 29.90

@@ -1,0 +1,21 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFR505_3V_0_5mA.s2p
+   1     BFR505_3V_7_5mA.s2p
+   
+   2     BFR505_5V_7_5mA.s2p
+   
+   3     BFR505_6V_0_5mA.s2p
+   
+   4     BFR505_S_NF_3V_1_25mA.s2p
+   5     BFR505_S_NF_3V_2_5mA.s2p
+   6     BFR505_S_NF_3V_3_75mA.s2p
+   7     BFR505_S_NF_3V_5mA.s2p
+   
+   8     BFR50_S_NF_6V_1_25mA.s2p
+   9     BFR505_S_NF_6V_2_5mA.s2p
+   10    BFR505_S_NF_6V_3_75mA.s2p
+   11    BFR505_S_NF_6V_5mA.s2p    
+ 
+END dscrdata

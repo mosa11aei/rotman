@@ -1,0 +1,8 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFM505_1V_1mA.s2p
+   1     BFM505_6V_3_75mA.s2p
+ 
+    
+END dscrdata

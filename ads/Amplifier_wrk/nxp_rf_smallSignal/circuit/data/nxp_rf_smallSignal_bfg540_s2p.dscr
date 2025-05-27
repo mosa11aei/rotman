@@ -1,0 +1,17 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFG540_4V_4mA.s2p
+   1     BFG540_4V_50mA.s2p
+   2     BFG540_8V_4mA.s2p
+   3     BFG540_8V_50mA.s2p
+   4     BFG540_S_NF_4V_10mA.s2p
+   5     BFG540_S_NF_4V_20mA.s2p
+   6     BFG540_S_NF_4V_30mA.s2p
+   7     BFG540_S_NF_4V_40mA.s2p
+   8     BFG540_S_NF_8V_10mA.s2p
+   9     BFG540_S_NF_8V_20mA.s2p
+   10    BFG540_S_NF_8V_30mA.s2p
+   11    BFG540_S_NF_8V_40mA.s2p
+ 
+END dscrdata

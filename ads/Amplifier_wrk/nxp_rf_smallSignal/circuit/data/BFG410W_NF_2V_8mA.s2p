@@ -1,0 +1,7 @@
+!BFG410W_noise.xls   
+!Philips part #:BFG410W
+! Bias condition: Vce=2V,Ic=8mA  
+# MHz dB Ratio deg ohm
+! Freq. Fmin Gmag Gangle Rn
+900  1.5 0.20 8.0 0.30 
+2000 1.8 0.17 34.5 0.35

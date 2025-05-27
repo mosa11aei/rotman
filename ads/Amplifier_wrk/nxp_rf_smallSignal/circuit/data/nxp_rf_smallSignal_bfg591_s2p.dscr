@@ -1,0 +1,15 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFG591_12V_10mA.s2p
+   1     BFG591_12V_20mA.s2p
+   2     BFG591_12V_30mA.s2p
+   3     BFG591_12V_40mA.s2p
+   4     BFG591_12V_50mA.s2p
+   5     BFG591_12V_60mA.s2p
+   6     BFG591_12V_70mA.s2p
+   7     BFG591_12V_80mA.s2p
+   8     BFG591_12V_90mA.s2p   
+   9     BFG591_12V_100mA.s2p
+ 
+END dscrdata

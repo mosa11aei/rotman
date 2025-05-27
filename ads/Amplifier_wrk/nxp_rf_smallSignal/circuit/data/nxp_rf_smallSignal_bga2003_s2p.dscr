@@ -1,0 +1,13 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BGA2003_S_NF_2_5V_10mA.s2p
+   1     BGA2003_S_NF_2_5V_15mA.s2p
+   2     BGA2003_S_NF_2_5V_20mA.s2p
+   3     BGA2003_S_NF_2_5V_25mA.s2p
+   4     BGA2003_S_NF_2_5V_2mA.s2p
+   5     BGA2003_S_NF_2_5V_4mA.s2p
+   6     BGA2003_S_NF_2_5V_6mA.s2p
+   7     BGA2003_S_NF_2_5V_8mA.s2p
+ 
+END dscrdata

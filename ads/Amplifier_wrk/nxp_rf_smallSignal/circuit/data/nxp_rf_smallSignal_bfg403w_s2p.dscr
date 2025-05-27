@@ -1,0 +1,35 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFG403W_1V_0_5mA.s2p
+   1     bfg403W_1V_1mA.s2p
+   2     bfg403W_1V_2mA.s2p
+   3     bfg403W_1V_3mA.s2p
+   4     bfg403W_1V_4mA.s2p
+   5     bfg403W_1V_5mA.s2p
+   6     bfg403W_1V_6mA.s2p
+   
+   7     BFG403W_2V_0_5mA.s2p
+   8     bfg403W_2V_1mA.s2p
+   9     bfg403W_2V_2mA.s2p
+   10    bfg403W_2V_3mA.s2p
+   11    bfg403W_2V_4mA.s2p
+   12    bfg403W_2V_5mA.s2p
+   13    bfg403W_2V_6mA.s2p
+   
+   14    BFG403W_3V_0_5mA.s2p
+   15    bfg403W_3V_1mA.s2p
+   16    bfg403W_3V_2mA.s2p
+   17    bfg403W_3V_3mA.s2p
+   18    bfg403W_3V_4mA.s2p
+   19    BFG403W_3V_5mA.s2p
+   20    BFG403W_3V_6mA.s2p
+   
+   21    BFG403W_4V_1mA.s2p
+   22    BFG403W_4V_2mA.s2p
+   23    BFG403W_4V_3mA.s2p
+   24    BFG403W_4V_4mA.s2p
+   25    BFG403W_4V_5mA.s2p
+   26    BFG403W_4V_6mA.s2p
+ 
+END dscrdata

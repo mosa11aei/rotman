@@ -1,0 +1,15 @@
+rfss_v2_4_lib:ba277_spice:schematic_nxp_rf_smallSignal | NXP Semiconductors | Encoded:ba277_spice | nxp_rf_smallSignal | NOLAYOUT
+rfss_v2_4_lib:bap50_02_s2p_se:schematic_nxp_rf_smallSignal | NXP Semiconductors | Encoded:bap50_02 SPAR measurement data, measured in SERIAL | nxp_rf_smallSignal | NOLAYOUT
+rfss_v2_4_lib:bap50_02_s2p_sh:schematic_nxp_rf_smallSignal | NXP Semiconductors | Encoded:bap50_02 SPAR measurement data, measured in SHUNT | nxp_rf_smallSignal | NOLAYOUT
+rfss_v2_4_lib:bap51_02_spice:schematic_nxp_rf_smallSignal | NXP Semiconductors | Encoded:bap51_02_spice | nxp_rf_smallSignal | NOLAYOUT
+rfss_v2_4_lib:bap51_03_spice:schematic_nxp_rf_smallSignal | NXP Semiconductors | Encoded:bap51_03_spice | nxp_rf_smallSignal | NOLAYOUT
+rfss_v2_4_lib:bap63_02_spice:schematic_nxp_rf_smallSignal | NXP Semiconductors | Encoded:bap63_02_spice | nxp_rf_smallSignal | NOLAYOUT
+rfss_v2_4_lib:bap63_03_spice:schematic_nxp_rf_smallSignal | NXP Semiconductors | Encoded:bap63_03_spice | nxp_rf_smallSignal | NOLAYOUT
+rfss_v2_4_lib:bap63_05w_spice:schematic_nxp_rf_smallSignal | NXP Semiconductors | Encoded:AC_diode model; X_tal=BAP64; Package=SOT323 | nxp_rf_smallSignal | NOLAYOUT
+rfss_v2_4_lib:bap64_02_spice:schematic_nxp_rf_smallSignal | NXP Semiconductors | Encoded:bap64_02_spice | nxp_rf_smallSignal | NOLAYOUT
+rfss_v2_4_lib:bap64_03_spice:schematic_nxp_rf_smallSignal | NXP Semiconductors | Encoded:bap64_03_spice | nxp_rf_smallSignal | NOLAYOUT
+rfss_v2_4_lib:bap64_05w_spice:schematic_nxp_rf_smallSignal | NXP Semiconductors | Encoded:AC_diode model; X_tal=BAP64; Package=SOT323 | nxp_rf_smallSignal | NOLAYOUT
+rfss_v2_4_lib:bap64_05_spice:schematic_nxp_rf_smallSignal | NXP Semiconductors | Encoded:AC_diode model; X_tal=BAP64; Package=SOT323 | nxp_rf_smallSignal | NOLAYOUT
+rfss_v2_4_lib:bap64_06_spice:schematic_nxp_rf_smallSignal | NXP Semiconductors | Encoded:AC_diode model; X_tal=BAP64; Package=SOT323 | nxp_rf_smallSignal | NOLAYOUT
+rfss_v2_4_lib:bap65_02_spice:schematic_nxp_rf_smallSignal | NXP Semiconductors | Encoded:bap65_02_spice | nxp_rf_smallSignal | NOLAYOUT
+rfss_v2_4_lib:bap65_03_spice:schematic_nxp_rf_smallSignal | NXP Semiconductors | Encoded:bap65_03_spice | nxp_rf_smallSignal | NOLAYOUT

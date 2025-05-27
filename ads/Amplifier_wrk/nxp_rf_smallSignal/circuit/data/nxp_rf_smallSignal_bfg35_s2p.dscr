@@ -1,0 +1,11 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFG35_10V_20mA.s2p
+   1     BFG35_10V_30mA.s2p
+   2     BFG35_10V_50mA.s2p
+   3     BFG35_10V_70mA.s2p
+   4     BFG35_10V_100mA.s2
+
+    
+END dscrdata

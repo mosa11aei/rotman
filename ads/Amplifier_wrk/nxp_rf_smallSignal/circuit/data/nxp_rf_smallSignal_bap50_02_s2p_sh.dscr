@@ -1,0 +1,12 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     bap50_02_sh_01m.s2p
+   1     bap50_02_sh_05m.s2p
+   2     bap50_02_sh_0V.s2p
+   3     bap50_02_sh_1m.s2p
+   4     bap50_02_sh_5m.s2p
+   5     bap50_02_sh_10m.s2p
+   6     bap50_02_sh_100m.s2p
+ 
+END dscrdata

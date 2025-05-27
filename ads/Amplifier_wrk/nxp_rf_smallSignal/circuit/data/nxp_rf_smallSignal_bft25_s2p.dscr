@@ -1,0 +1,11 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFT25_1V_0_1mA.s2p
+   1     BFT25_1V_0_2mA.s2p
+   2     BFT25_1V_0_5mA.s2p
+   3     BFT25_1V_1mA.s2p
+   
+
+
+END dscrdata

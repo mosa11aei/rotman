@@ -1,0 +1,25 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFS17A_5V_2mA.s2p
+   1     BFS17A_5V_5mA.s2p
+   2     BFS17A_5V_10mA.s2p
+   3     BFS17A_5V_15mA.s2p
+   4     BFS17A_5V_20mA.s2p
+   5     BFS17A_10V_2mA.s2p
+   6     BFS17A_10V_5mA.s2p
+   7     BFS17A_10V_10mA.s2p
+   8     BFS17A_10V_15mA.s2p
+   9     BFS17A_10V_20mA.s2p
+   10    BFS17A_common_base_5V_2mA.s2p
+   11    BFS17A_common_base_5V_5mA.s2p
+   12    BFS17A_common_base_5V_10mA.s2p
+   13    BFS17A_common_base_5V_15mA.s2p
+   14    BFS17A_common_base_5V_20mA.s2p
+   15    BFS17A_common_base_10V_2mA.s2p
+   16    BFS17A_common_base_10V_5mA.s2p
+   17    BFS17A_common_base_10V_10mA.s2p
+   18    BFS17A_common_base_10V_15mA.s2p
+   19    BFS17A_common_base_10V_20mA.s2p
+
+END dscrdata

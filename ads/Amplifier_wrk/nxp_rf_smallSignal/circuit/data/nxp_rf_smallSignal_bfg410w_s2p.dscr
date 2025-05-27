@@ -1,0 +1,68 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     bfg410W_1V_4mA.s2p
+   1     bfg410W_1V_5mA.s2p
+   2     bfg410W_1V_6mA.s2p
+   3     bfg410W_1V_7mA.s2p
+   4     bfg410W_1V_8mA.s2p
+   5     bfg410W_1V_9mA.s2p   
+   6     bfg410W_1V_10mA.s2p
+   7     bfg410W_1V_11mA.s2p
+   8     bfg410W_1V_12mA.s2p
+   9     bfg410W_1V_13mA.s2p
+   10    bfg410W_1V_14mA.s2p
+   11    bfg410W_1V_15mA.s2p
+   
+   12    bfg410W_2V_1mA.s2p
+   13    bfg410W_2V_2mA.s2p
+   14    bfg410W_2V_3mA.s2p
+   15    bfg410W_2V_4mA.s2p
+   16    bfg410W_2V_5mA.s2p
+   17    bfg410W_2V_6mA.s2p
+   18    bfg410W_2V_7mA.s2p
+   19    bfg410W_2V_8mA.s2p  
+   20    bfg410W_2V_9mA.s2p
+   21    bfg410W_2V_10mA.s2p
+   22    bfg410W_2V_11mA.s2p
+   23    bfg410W_2V_12mA.s2p
+   24    bfg410W_2V_13mA.s2p
+   25    bfg410W_2V_14mA.s2p
+   26    bfg410W_2V_15mA.s2p
+   
+   27    bfg410W_3V_1ma.s2p
+   28    bfg410W_3V_2mA.s2p
+   29    bfg410W_3V_3mA.s2p      
+   30    bfg410W_3V_4mA.s2p
+   31    bfg410W_3V_5mA.s2p
+   32    bfg410W_3V_6mA.s2p
+   33    bfg410W_3V_7mA.s2p
+   34    bfg410W_3V_8mA.s2p
+   35    bfg410W_3V_9mA.s2p
+   36    bfg410W_3V_10mA.s2p
+   37    bfg410W_3V_11mA.s2p
+   38    bfg410W_3V_12mA.s2p
+   39    bfg410W_3V_13mA.s2p
+   40    bfg410W_3V_14mA.s2p
+   41    bfg410W_3V_15mA.s2p
+   
+   42    bfg410W_4V_1mA.s2p        
+   43    bfg410W_4V_2mA.s2p       
+   44    bfg410W_4V_3mA.s2p   
+   45    bfg410W_4V_4mA.s2p    
+   46    bfg410W_4V_5mA.s2p
+   47    bfg410W_4V_6mA.s2p
+   48    bfg410W_4V_7mA.s2p
+   49    bfg410W_4V_8mA.s2p 
+   50    bfg410W_4V_9mA.s2p
+   51    bfg410W_4V_10mA.s2p
+   52    bfg410W_4V_11mA.s2p
+   53    bfg410W_4V_12mA.s2p
+   54    bfg410W_4V_13mA.s2p
+   55    bfg410W_4V_14mA.s2p
+   56    bfg410W_4V_15mA.s2p
+   57    BFG410W_NF_2V_8mA.s2p
+   
+   
+
+END dscrdata

@@ -1,0 +1,12 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BFQ19_10V_15mA.s2p
+   1     BFQ19_10V_30mA.s2p
+   2     BFQ19_10V_50mA.s2p
+   3     BFQ19_5V_15mA.s2p
+   4     BFQ19_5V_30mA.s2p
+   5     BFQ19_5V_50mA.s2p
+   6     BFQ19_5V_70mA.s2p
+   
+END dscrdata

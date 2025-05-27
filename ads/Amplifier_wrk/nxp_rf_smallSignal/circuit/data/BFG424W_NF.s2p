@@ -1,0 +1,6 @@
+!BFG424W_noise.xls                  !Philips part #:BFG424W
+! Bias condition: Vce=2V,Ic=1mA   
+# MHz dB Ratio deg ohm
+! Freq. Fmin Gopt Gopt Rn
+900  0.7 0.67 19.1 0.40
+2000 1.3 0.56 57.5 0.36

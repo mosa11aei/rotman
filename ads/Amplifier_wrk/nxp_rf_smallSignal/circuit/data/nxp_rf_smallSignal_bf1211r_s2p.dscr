@@ -1,0 +1,9 @@
+BEGIN dscrdata
+%  INDEX filename
+
+   0     BF1211R_5V_12mA.s2p
+   1     BF1211R_5V_15mA.s2p
+   2     BF1211R_S_NF_5V_15mA.s2p
+   3     BF1211R_noise.s2p
+ 
+END dscrdata
