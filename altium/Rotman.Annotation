@@ -1,0 +1,13 @@
+[DesignatorManager]
+
+[SheetNumberManager]
+SheetNumberOrder=Display Order
+SheetNumberMethod=Increasing
+DocumentName0=Amp.SchDoc
+UniqueIDPath0=
+SheetNumber0=1
+DocumentName1=Niner.SchDoc
+UniqueIDPath1=
+SheetNumber1=2
+
+
