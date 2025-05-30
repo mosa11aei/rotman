@@ -8,11 +8,7 @@ From  : Variant [[No Variations]] of Project [Rotman.PrjPcb]
    Generated File[features]
    Generated File[tools]
    Generated File[features]
-   Generated File[features]
    Generated File[tools]
-   Generated File[features]
-   Generated File[features]
-   Generated File[features]
    Generated File[features]
    Generated File[features]
    Generated File[components]
@@ -22,7 +18,7 @@ From  : Variant [[No Variations]] of Project [Rotman.PrjPcb]
    Generated File[SingleBoard.REP]
 
 
-Files Generated   : 19
+Files Generated   : 15
 Documents Printed : 0
 
-Finished Output Generation At 11:33:15 AM On 5/30/2025
+Finished Output Generation At 2:42:05 PM On 5/30/2025
