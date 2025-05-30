@@ -1,0 +1,262 @@
+UNITS=MM
+#
+#Component attribute names
+#
+@0 .comp_mount_type
+@1 .comp_height
+@2 .no_pop
+@3 .comp_ignore
+@4 .comp_variant_list
+@5 .placement_layer
+
+#
+#Component attribute text strings
+#
+&0 top_layer
+
+# CMP 0
+CMP 2 62.23 130.429 180 N GND,_Vbb,_Vcc 61300311121 ;0=2,1=0.0000,5=0
+PRP Arrow_Part_Number ''
+PRP Arrow_Price/Stock ''
+PRP Datasheet_Link 'http://katalog.we-online.de/em/datasheet/6130xx11121.pdf'
+PRP Height '8.69mm'
+PRP Manufacturer_Name 'Wurth Elektronik'
+PRP Manufacturer_Part_Number '61300311121'
+PRP Mouser_Part_Number '710-61300311121'
+PRP Mouser_Price/Stock 'https://www.mouser.co.uk/ProductDetail/Wurth-Elektronik/61300311121?qs=PhR8RmCirEYxRWFJzNKsUw%3D%3D'
+TOP 0 62.23 130.429 180 N 1 6 1
+TOP 1 59.69 130.429 180 N 2 8 2
+TOP 2 57.15 130.429 180 N 13 12 3
+#
+# CMP 1
+CMP 0 42.037 124.333 270 N R1 Resistor ;0=1,1=0.5500,5=0
+PRP Value '10'
+TOP 0 42.037 123.7330012 180 N 9 0 1
+TOP 1 42.037 124.9329988 180 N 2 11 2
+#
+# CMP 2
+CMP 1 68.36199942 125.33399876 0 N Q2 BFU710F,115 ;0=1,1=0.0000,5=0
+PRP Arrow_Part_Number ''
+PRP Arrow_Price/Stock ''
+PRP Datasheet_Link 'http://www.nxp.com/docs/en/data-sheet/BFU710F.pdf'
+PRP Height '0.75mm'
+PRP Manufacturer_Name 'NXP'
+PRP Manufacturer_Part_Number 'BFU710F,115'
+PRP Mouser_Part_Number '771-BFU710F115'
+PRP Mouser_Price/Stock 'https://www.mouser.com/Search/Refine.aspx?Keyword=771-BFU710F115'
+TOP 0 67.437 124.78399986 270 N 13 24 1
+TOP 1 67.437 125.984 270 N 2 14 2
+TOP 2 69.28699884 125.984 270 N 13 26 3
+TOP 3 69.28699884 124.68399752 270 N 7 3 4
+#
+# CMP 3
+CMP 1 48.387 125.349 0 N Q1 BFU710F,115 ;0=1,1=0.0000,5=0
+PRP Arrow_Part_Number ''
+PRP Arrow_Price/Stock ''
+PRP Datasheet_Link 'http://www.nxp.com/docs/en/data-sheet/BFU710F.pdf'
+PRP Height '0.75mm'
+PRP Manufacturer_Name 'NXP'
+PRP Manufacturer_Part_Number 'BFU710F,115'
+PRP Mouser_Part_Number '771-BFU710F115'
+PRP Mouser_Price/Stock 'https://www.mouser.com/Search/Refine.aspx?Keyword=771-BFU710F115'
+TOP 0 47.46200058 124.7990011 270 N 13 23 1
+TOP 1 47.46200058 125.99900124 270 N 2 13 2
+TOP 2 49.31199942 125.99900124 270 N 13 22 3
+TOP 3 49.31199942 124.69899876 270 N 10 3 4
+#
+# CMP 4
+CMP 5 72.644 123.444 90 N L5 LQP03HQ0N5W02D ;0=1,1=0.0000,5=0
+PRP Arrow_Part_Number ''
+PRP Arrow_Price/Stock ''
+PRP Datasheet_Link 'https://search.murata.co.jp/Ceramy/image/img/P02/JELF243C-0021.pdf'
+PRP Height '0.42mm'
+PRP Manufacturer_Name 'Murata Electronics'
+PRP Manufacturer_Part_Number 'LQP03HQ0N5W02D'
+PRP Mouser_Part_Number '81-LQP03HQ0N5W02D'
+PRP Mouser_Price/Stock 'https://www.mouser.co.uk/ProductDetail/Murata-Electronics/LQP03HQ0N5W02D?qs=xZ%2FP%252Ba9zWqaDUf%2FupWIkIQ%3D%3D'
+TOP 0 72.644 123.8709994 0 N 7 2 1
+TOP 1 72.644 123.2710006 0 N 1 2 2
+#
+# CMP 5
+CMP 4 83.50199962 124.6886 0 N L4 LQP02HQ0N9W02L ;0=1,1=0.0000,5=0
+PRP Arrow_Part_Number ''
+PRP Arrow_Price/Stock ''
+PRP Datasheet_Link 'https://search.murata.co.jp/Ceramy/image/img/P02/JELF243C-0023.pdf'
+PRP Height '0.32mm'
+PRP Manufacturer_Name 'Murata Electronics'
+PRP Manufacturer_Part_Number 'LQP02HQ0N9W02L'
+PRP Mouser_Part_Number '81-LQP02HQ0N9W02L'
+PRP Mouser_Price/Stock 'https://www.mouser.co.uk/ProductDetail/Murata-Electronics/LQP02HQ0N9W02L?qs=70cth9uAySf%252Bytje7ApwGQ%3D%3D'
+TOP 0 83.312 124.6886 0 N 6 2 1
+TOP 1 83.69199924 124.6886 0 N 3 5 2
+#
+# CMP 6
+CMP 4 79.69199962 124.714 0 N L3 LQP02HQ0N9W02L ;0=1,1=0.0000,5=0
+PRP Arrow_Part_Number ''
+PRP Arrow_Price/Stock ''
+PRP Datasheet_Link 'https://search.murata.co.jp/Ceramy/image/img/P02/JELF243C-0023.pdf'
+PRP Height '0.32mm'
+PRP Manufacturer_Name 'Murata Electronics'
+PRP Manufacturer_Part_Number 'LQP02HQ0N9W02L'
+PRP Mouser_Part_Number '81-LQP02HQ0N9W02L'
+PRP Mouser_Price/Stock 'https://www.mouser.co.uk/ProductDetail/Murata-Electronics/LQP02HQ0N9W02L?qs=70cth9uAySf%252Bytje7ApwGQ%3D%3D'
+TOP 0 79.502 124.714 0 N 8 2 1
+TOP 1 79.88199924 124.714 0 N 6 1 2
+#
+# CMP 7
+CMP 4 53.213 123.63399962 90 N L2 LQP02HQ0N4W02L ;0=1,1=0.0000,5=0
+PRP Arrow_Part_Number ''
+PRP Arrow_Price/Stock ''
+PRP Datasheet_Link 'https://search.murata.co.jp/Ceramy/image/img/P02/JELF243C-0023.pdf'
+PRP Height '0.32mm'
+PRP Manufacturer_Name 'Murata Electronics'
+PRP Manufacturer_Part_Number 'LQP02HQ0N4W02L'
+PRP Mouser_Part_Number '81-LQP02HQ0N4W02L'
+PRP Mouser_Price/Stock 'https://www.mouser.co.uk/ProductDetail/Murata-Electronics/LQP02HQ0N4W02L?qs=70cth9uAySen4TtaTnoOUg%3D%3D'
+TOP 0 53.213 123.82399924 90 N 10 4 1
+TOP 1 53.213 123.444 90 N 1 5 2
+#
+# CMP 8
+CMP 6 34.925 125.62400072 90 N L1 LQP03TN0N6B02D ;0=1,1=0.0000,5=0
+PRP Arrow_Part_Number ''
+PRP Arrow_Price/Stock ''
+PRP Datasheet_Link 'https://search.murata.co.jp/Ceramy/image/img/P02/JELF243C-0015.pdf'
+PRP Height '0.33mm'
+PRP Manufacturer_Name 'Murata Electronics'
+PRP Manufacturer_Part_Number 'LQP03TN0N6B02D'
+PRP Mouser_Part_Number '81-LQP03TN0N6B02D'
+PRP Mouser_Price/Stock 'https://www.mouser.com/Search/Refine.aspx?Keyword=81-LQP03TN0N6B02D'
+PRP Value '0.6nH'
+TOP 0 34.925 125.89900144 90 N 12 3 1
+TOP 1 34.925 125.349 90 N 13 28 2
+#
+# CMP 9
+CMP 2 44.704 130.429 180 N Vcc,_Vbb,_GND 61300311121 ;0=2,1=0.0000,5=0
+PRP Arrow_Part_Number ''
+PRP Arrow_Price/Stock ''
+PRP Datasheet_Link 'http://katalog.we-online.de/em/datasheet/6130xx11121.pdf'
+PRP Height '8.69mm'
+PRP Manufacturer_Name 'Wurth Elektronik'
+PRP Manufacturer_Part_Number '61300311121'
+PRP Mouser_Part_Number '710-61300311121'
+PRP Mouser_Price/Stock 'https://www.mouser.co.uk/ProductDetail/Wurth-Elektronik/61300311121?qs=PhR8RmCirEYxRWFJzNKsUw%3D%3D'
+TOP 0 44.704 130.429 180 N 13 25 1
+TOP 1 42.164 130.429 180 N 2 12 2
+TOP 2 39.624 130.429 180 N 1 3 3
+#
+# CMP 10
+CMP 7 97.536 126.01699968 180 N OUT CON-SMA-EDGE-S ;0=1,1=6.3500,5=0
+PRP Check_prices 'https://www.snapeda.com/parts/CON-SMA-EDGE-S/RF+Solutions/view-part/?ref=eda'
+PRP Digi-Key_Part_Number 'CON-SMA-EDGE-S-ND'
+PRP MF 'RF Solutions'
+PRP MP 'CON-SMA-EDGE-S'
+PRP Package 'None'
+PRP Purchase-URL 'https://pricing.snapeda.com/search/part/CON-SMA-EDGE-S/?ref=eda'
+PRP SnapEDA_Link 'https://www.snapeda.com/parts/CON-SMA-EDGE-S/RF+Solutions/view-part/?ref=snap'
+PRP Value ''
+TOP 0 97.536 126.01699968 180 N 5 2 1
+TOP 1 97.536 123.317 180 N 13 32 G1
+TOP 2 97.536 128.71699936 180 N 13 27 G2
+TOP 3 97.536 123.317 180 N 13 30 G3
+TOP 4 97.536 128.71699936 180 N 13 31 G4
+#
+# CMP 11
+CMP 7 25.273 126.01699968 0 N IN CON-SMA-EDGE-S ;0=1,1=6.3500,5=0
+PRP Check_prices 'https://www.snapeda.com/parts/CON-SMA-EDGE-S/RF+Solutions/view-part/?ref=eda'
+PRP Digi-Key_Part_Number 'CON-SMA-EDGE-S-ND'
+PRP MF 'RF Solutions'
+PRP MP 'CON-SMA-EDGE-S'
+PRP Package 'None'
+PRP Purchase-URL 'https://pricing.snapeda.com/search/part/CON-SMA-EDGE-S/?ref=eda'
+PRP SnapEDA_Link 'https://www.snapeda.com/parts/CON-SMA-EDGE-S/RF+Solutions/view-part/?ref=snap'
+PRP Value ''
+TOP 0 25.273 126.01699968 0 N 11 2 1
+TOP 1 25.273 128.71699936 0 N 13 29 G1
+TOP 2 25.273 123.317 0 N 13 13 G2
+TOP 3 25.273 128.71699936 0 N 13 21 G3
+TOP 4 25.273 123.317 0 N 13 14 G4
+#
+# CMP 12
+CMP 3 89.662 124.587 180 N C14 QSCF500Q0R7B1GV001T ;0=1,1=0.0000,5=0
+PRP Value '0.7p'
+TOP 0 90.0079988 124.714 90 N 5 1 1
+TOP 1 89.2205988 124.714 90 N 3 4 2
+#
+# CMP 13
+CMP 3 85.598 125.095 90 N C13 GQM1555C2DR40WB01 ;0=1,1=0.0000,5=0
+PRP Value '0.4pF'
+TOP 0 85.471 125.4409988 0 N 13 10 1
+TOP 1 85.471 124.6535988 0 N 3 3 2
+#
+# CMP 14
+CMP 3 81.534 124.968 270 N C12 GQM1555C2DR60WB01D ;0=1,1=0.0000,5=0
+PRP Value '0.6p'
+TOP 0 81.661 124.6220012 180 N 6 0 1
+TOP 1 81.661 125.4094012 180 N 13 11 2
+#
+# CMP 15
+CMP 3 77.978 125.095 90 N C11 GQM1555C2DR40WB01 ;0=1,1=0.0000,5=0
+PRP Value '0.4pF'
+TOP 0 77.851 125.4409988 0 N 13 15 1
+TOP 1 77.851 124.6535988 0 N 8 1 2
+#
+# CMP 16
+CMP 3 75.565 124.587 180 N C10 GQM1555C2DR70WB01 ;0=1,1=0.0000,5=0
+PRP Value '0.7p'
+TOP 0 75.9109988 124.714 90 N 8 0 1
+TOP 1 75.1235988 124.714 90 N 7 4 2
+#
+# CMP 17
+CMP 3 62.611 124.714 180 N C9 QSCF500Q0R7B1GV001T ;0=1,1=0.0000,5=0
+PRP Value '0.7p'
+TOP 0 62.9569988 124.841 90 N 2 7 1
+TOP 1 62.1695988 124.841 90 N 4 6 2
+#
+# CMP 18
+CMP 0 50.419 121.539 270 N C8 GCQ0335C1HR60WB01D ;0=1,1=0.5500,5=0
+PRP Value '100pF'
+TOP 0 50.419 120.9390012 180 N 13 19 1
+TOP 1 50.419 122.1389988 180 N 1 7 2
+#
+# CMP 19
+CMP 0 51.562 121.539 270 N C7 GCQ0335C1HR60WB01D ;0=1,1=0.5500,5=0
+PRP Value '1nF'
+TOP 0 51.562 120.9390012 180 N 13 20 1
+TOP 1 51.562 122.1389988 180 N 1 4 2
+#
+# CMP 20
+CMP 0 42.037 121.666 270 N C6 GCQ0335C1HR60WB01D ;0=1,1=0.5500,5=0
+PRP Value '100pF'
+TOP 0 42.037 121.0660012 180 N 13 18 1
+TOP 1 42.037 122.2659988 180 N 9 1 2
+#
+# CMP 21
+CMP 3 59.309 124.333 270 N C5 GQM1555C2DR40WB01 ;0=1,1=0.0000,5=0
+PRP Value '0.4pF'
+TOP 0 59.436 123.9870012 180 N 13 16 1
+TOP 1 59.436 124.7744012 180 N 4 5 2
+#
+# CMP 22
+CMP 3 39.878 125.603 90 N C4 GQM1555C2DR40WB01 ;0=1,1=0.0000,5=0
+PRP Value '0.4pF'
+TOP 0 39.751 125.9489988 0 N 2 10 1
+TOP 1 39.751 125.1615988 0 N 13 17 2
+#
+# CMP 23
+CMP 3 55.118 124.968 0 N C3 GQM1555C2DR40WB01 ;0=1,1=0.0000,5=0
+PRP Value '0.4pF'
+TOP 0 54.7720012 124.841 270 N 10 5 1
+TOP 1 55.5594012 124.841 270 N 4 4 2
+#
+# CMP 24
+CMP 3 37.338 125.857 180 N C2 GQM1555C2DR60WB01D ;0=1,1=0.0000,5=0
+PRP Value '0.6p'
+TOP 0 37.6839988 125.984 90 N 2 9 1
+TOP 1 36.8965988 125.984 90 N 12 4 2
+#
+# CMP 25
+CMP 3 31.75 125.857 180 N C1 QSCF500Q0R7B1GV001T ;0=1,1=0.0000,5=0
+PRP Value '0.7p'
+TOP 0 32.0959988 125.984 90 N 12 5 1
+TOP 1 31.3085988 125.984 90 N 11 1 2
+#
